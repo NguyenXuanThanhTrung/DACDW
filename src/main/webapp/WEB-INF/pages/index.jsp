@@ -41,100 +41,7 @@
     </div>
 </div>
 <!-- Preloader Start -->
-<header>
-    <!-- Header Start -->
-    <div class="header-area">
-        <div class="main-header ">
-            <div class="header-top black-bg d-none d-sm-block">
-                <div class="container">
-                    <div class="col-xl-12">
-                        <div class="row d-flex justify-content-between align-items-center">
-                            <div class="header-info-left">
-                                <ul>
-                                    <li class="title"><span class="flaticon-energy"></span> trending-title</li>
-                                    <li>Class property employ ancho red multi level mansion</li>
-                                </ul>
-                            </div>
-                            <div class="header-info-right">
-                                <ul class="header-date">
-                                    <li><span class="flaticon-calendar"></span> +880166 253 232</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="header-mid gray-bg">
-                <div class="container">
-                    <div class="row d-flex align-items-center">
-                        <!-- Logo -->
-                        <div class="col-xl-3 col-lg-3 col-md-3 d-none d-md-block">
-                            <div class="logo">
-                                <a href="<%= request.getContextPath() %>/index"><img src="<%= request.getContextPath() %>/../../assets/img/logo/logo.png" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-xl-9 col-lg-9 col-md-9">
-                            <div class="header-banner f-right ">
-                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/header_card.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="header-bottom header-sticky">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-xl-8 col-lg-8 col-md-12 header-flex">
-                            <!-- sticky -->
-                            <div class="sticky-logo">
-                                <a href="<%= request.getContextPath() %>/index"><img src="<%= request.getContextPath() %>/../../assets/img/logo/logo.png" alt=""></a>
-                            </div>
-                            <!-- Main-menu -->
-                            <div class="main-menu d-none d-md-block">
-                                <nav>
-                                    <ul id="navigation">
-                                        <li><a href="<%= request.getContextPath() %>/index">Home</a></li>
-                                        <li><a href="<%= request.getContextPath() %>/about">About</a></li>
-                                        <li><a href="<%= request.getContextPath() %>/categori">Category</a></li>
-                                        <li><a href="<%= request.getContextPath() %>/latest_news">Latest News</a></li>
-                                        <li><a href="#">Pages</a>
-                                            <ul class="submenu">
-                                                <li><a href="<%= request.getContextPath() %>/blog">Blog</a></li>
-                                                <li><a href="<%= request.getContextPath() %>/blog_details">Blog Details</a></li>
-                                                <li><a href="<%= request.getContextPath() %>/elements">Element</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="<%= request.getContextPath() %>/contact">Contact</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4">
-                            <div class="header-right f-right d-none d-lg-block">
-                                <!-- Header Social -->
-                                <ul class="header-social">
-                                    <li><a href="https://www.fb.com/sai4ull"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                                </ul>
-                                <!-- Search Nav -->
-                                <div class="nav-search search-switch">
-                                    <i class="fa fa-search"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Mobile Menu -->
-                        <div class="col-12">
-                            <div class="mobile_menu d-block d-md-none"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Header End -->
-</header>
+<jsp:include page="header.jsp"/>
 <main>
     <!-- Trending Area Start -->
     <div class="trending-area fix pt-25 gray-bg">
@@ -148,11 +55,13 @@
                             <div class="single-slider">
                                 <div class="trending-top mb-30">
                                     <div class="trend-top-img">
-                                        <img src="<%= request.getContextPath() %>/../../assets/img/trending/trending_top2.jpg" alt="">
+                                        <img src="<%= request.getContextPath() %>/../../assets/img/trending/trending_top2.jpg"
+                                             alt="">
                                         <div class="trend-top-cap">
                                         <span class="bgr" data-animation="fadeInUp" data-delay=".2s"
                                               data-duration="1000ms">Business</span>
-                                            <h2><a href="<%= request.getContextPath() %>/latest_news" data-animation="fadeInUp" data-delay=".4s"
+                                            <h2><a href="<%= request.getContextPath() %>/latest_news"
+                                                   data-animation="fadeInUp" data-delay=".4s"
                                                    data-duration="1000ms">Anna Lora Stuns In White At Her Australian
                                                 Premiere</a></h2>
                                             <p data-animation="fadeInUp" data-delay=".6s" data-duration="1000ms">by
@@ -165,11 +74,13 @@
                             <div class="single-slider">
                                 <div class="trending-top mb-30">
                                     <div class="trend-top-img">
-                                        <img src="<%= request.getContextPath() %>/../../assets/img/trending/trending_top02.jpg" alt="">
+                                        <img src="<%= request.getContextPath() %>/../../assets/img/trending/trending_top02.jpg"
+                                             alt="">
                                         <div class="trend-top-cap">
                                         <span class="bgr" data-animation="fadeInUp" data-delay=".2s"
                                               data-duration="1000ms">Business</span>
-                                            <h2><a href="<%= request.getContextPath() %>/latest_news" data-animation="fadeInUp" data-delay=".4s"
+                                            <h2><a href="<%= request.getContextPath() %>/latest_news"
+                                                   data-animation="fadeInUp" data-delay=".4s"
                                                    data-duration="1000ms">Anna Lora Stuns In White At Her Australian
                                                 Premiere</a></h2>
                                             <p data-animation="fadeInUp" data-delay=".6s" data-duration="1000ms">by
@@ -182,11 +93,13 @@
                             <div class="single-slider">
                                 <div class="trending-top mb-30">
                                     <div class="trend-top-img">
-                                        <img src="<%= request.getContextPath() %>/../../assets/img/trending/trending_top03.jpg" alt="">
+                                        <img src="<%= request.getContextPath() %>/../../assets/img/trending/trending_top03.jpg"
+                                             alt="">
                                         <div class="trend-top-cap">
                                         <span class="bgr" data-animation="fadeInUp" data-delay=".2s"
                                               data-duration="1000ms">Business</span>
-                                            <h2><a href="<%= request.getContextPath() %>/latest_news" data-animation="fadeInUp" data-delay=".4s"
+                                            <h2><a href="<%= request.getContextPath() %>/latest_news"
+                                                   data-animation="fadeInUp" data-delay=".4s"
                                                    data-duration="1000ms">Anna Lora Stuns In White At Her Australian
                                                 Premiere</a></h2>
                                             <p data-animation="fadeInUp" data-delay=".6s" data-duration="1000ms">by
@@ -204,10 +117,12 @@
                             <div class="col-lg-12 col-md-6 col-sm-6">
                                 <div class="trending-top mb-30">
                                     <div class="trend-top-img">
-                                        <img src="<%= request.getContextPath() %>/../../assets/img/trending/trending_top3.jpg" alt="">
+                                        <img src="<%= request.getContextPath() %>/../../assets/img/trending/trending_top3.jpg"
+                                             alt="">
                                         <div class="trend-top-cap trend-top-cap2">
                                             <span class="bgb">FASHION</span>
-                                            <h2><a href="<%= request.getContextPath() %>/latest_news">Secretart for Economic Air
+                                            <h2><a href="<%= request.getContextPath() %>/latest_news">Secretart for
+                                                Economic Air
                                                 plane that looks like</a></h2>
                                             <p>by Alice cloe - Jun 19, 2020</p>
                                         </div>
@@ -217,10 +132,12 @@
                             <div class="col-lg-12 col-md-6 col-sm-6">
                                 <div class="trending-top mb-30">
                                     <div class="trend-top-img">
-                                        <img src="<%= request.getContextPath() %>/../../assets/img/trending/trending_top4.jpg" alt="">
+                                        <img src="<%= request.getContextPath() %>/../../assets/img/trending/trending_top4.jpg"
+                                             alt="">
                                         <div class="trend-top-cap trend-top-cap2">
                                             <span class="bgg">TECH </span>
-                                            <h2><a href="<%= request.getContextPath() %>/latest_news">Secretart for Economic Air plane that looks
+                                            <h2><a href="<%= request.getContextPath() %>/latest_news">Secretart for
+                                                Economic Air plane that looks
                                                 like</a></h2>
                                             <p>by Alice cloe - Jun 19, 2020</p>
                                         </div>
@@ -279,18 +196,22 @@
                                 <!-- Nav Card -->
                                 <div class="tab-content" id="nav-tabContent">
                                     <!-- card one -->
-                                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                                         aria-labelledby="nav-home-tab">
                                         <div class="row">
                                             <!-- Left Details Caption -->
                                             <div class="col-xl-6 col-lg-12">
                                                 <div class="whats-news-single mb-40 mb-40">
                                                     <div class="whates-img">
-                                                        <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_news_details1.png" alt="">
+                                                        <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_news_details1.png"
+                                                             alt="">
                                                     </div>
                                                     <div class="whates-caption">
-                                                        <h4><a href="<%= request.getContextPath() %>/latest_news">Secretart for Economic Air plane that looks like</a></h4>
+                                                        <h4><a href="<%= request.getContextPath() %>/latest_news">Secretart
+                                                            for Economic Air plane that looks like</a></h4>
                                                         <span>by Alice cloe   -   Jun 19, 2020</span>
-                                                        <p>Struggling to sell one multi-million dollar home currently on the market won’t stop actress and singer Jennifer Lopez.</p>
+                                                        <p>Struggling to sell one multi-million dollar home currently on
+                                                            the market won’t stop actress and singer Jennifer Lopez.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -301,11 +222,15 @@
                                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                         <div class="whats-right-single mb-20">
                                                             <div class="whats-right-img">
-                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img1.png" alt="">
+                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img1.png"
+                                                                     alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorb">FASHION</span>
-                                                                <h4><a href="<%= request.getContextPath() %>/latest_news">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4>
+                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                        of group of friends ting eat. market in.</a>
+                                                                </h4>
                                                                 <p>Jun 19, 2020</p>
                                                             </div>
                                                         </div>
@@ -313,11 +238,15 @@
                                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                         <div class="whats-right-single mb-20">
                                                             <div class="whats-right-img">
-                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img2.png" alt="">
+                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img2.png"
+                                                                     alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorb">FASHION</span>
-                                                                <h4><a href="<%= request.getContextPath() %>/latest_news">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4>
+                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                        of group of friends ting eat. market in.</a>
+                                                                </h4>
                                                                 <p>Jun 19, 2020</p>
                                                             </div>
                                                         </div>
@@ -325,11 +254,15 @@
                                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                         <div class="whats-right-single mb-20">
                                                             <div class="whats-right-img">
-                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img3.png" alt="">
+                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img3.png"
+                                                                     alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorg">FASHION</span>
-                                                                <h4><a href="<%= request.getContextPath() %>/latest_news">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4>
+                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                        of group of friends ting eat. market in.</a>
+                                                                </h4>
                                                                 <p>Jun 19, 2020</p>
                                                             </div>
                                                         </div>
@@ -337,11 +270,15 @@
                                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                         <div class="whats-right-single mb-20">
                                                             <div class="whats-right-img">
-                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img4.png" alt="">
+                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img4.png"
+                                                                     alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorr">FASHION</span>
-                                                                <h4><a href="<%= request.getContextPath() %>/latest_news">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4>
+                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                        of group of friends ting eat. market in.</a>
+                                                                </h4>
                                                                 <p>Jun 19, 2020</p>
                                                             </div>
                                                         </div>
@@ -351,18 +288,22 @@
                                         </div>
                                     </div>
                                     <!-- Card two -->
-                                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                    <div class="tab-pane fade" id="nav-profile" role="tabpanel"
+                                         aria-labelledby="nav-profile-tab">
                                         <div class="row">
                                             <!-- Left Details Caption -->
                                             <div class="col-xl-6">
                                                 <div class="whats-news-single mb-40">
                                                     <div class="whates-img">
-                                                        <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img2.png" alt="">
+                                                        <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img2.png"
+                                                             alt="">
                                                     </div>
                                                     <div class="whates-caption">
-                                                        <h4><a href="#">Secretart for Economic Air plane that looks like</a></h4>
+                                                        <h4><a href="#">Secretart for Economic Air plane that looks
+                                                            like</a></h4>
                                                         <span>by Alice cloe   -   Jun 19, 2020</span>
-                                                        <p>Struggling to sell one multi-million dollar home currently on the market won’t stop actress and singer Jennifer Lopez.</p>
+                                                        <p>Struggling to sell one multi-million dollar home currently on
+                                                            the market won’t stop actress and singer Jennifer Lopez.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -373,11 +314,15 @@
                                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                         <div class="whats-right-single mb-20">
                                                             <div class="whats-right-img">
-                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img1.png" alt="">
+                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img1.png"
+                                                                     alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorb">FASHION</span>
-                                                                <h4><a href="<%= request.getContextPath() %>/latest_news">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4>
+                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                        of group of friends ting eat. market in.</a>
+                                                                </h4>
                                                                 <p>Jun 19, 2020</p>
                                                             </div>
                                                         </div>
@@ -385,11 +330,15 @@
                                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                         <div class="whats-right-single mb-20">
                                                             <div class="whats-right-img">
-                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img2.png" alt="">
+                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img2.png"
+                                                                     alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorb">FASHION</span>
-                                                                <h4><a href="<%= request.getContextPath() %>/latest_news">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4>
+                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                        of group of friends ting eat. market in.</a>
+                                                                </h4>
                                                                 <p>Jun 19, 2020</p>
                                                             </div>
                                                         </div>
@@ -397,11 +346,15 @@
                                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                         <div class="whats-right-single mb-20">
                                                             <div class="whats-right-img">
-                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img3.png" alt="">
+                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img3.png"
+                                                                     alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorg">FASHION</span>
-                                                                <h4><a href="<%= request.getContextPath() %>/latest_news">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4>
+                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                        of group of friends ting eat. market in.</a>
+                                                                </h4>
                                                                 <p>Jun 19, 2020</p>
                                                             </div>
                                                         </div>
@@ -409,11 +362,15 @@
                                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                         <div class="whats-right-single mb-20">
                                                             <div class="whats-right-img">
-                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img4.png" alt="">
+                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img4.png"
+                                                                     alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorr">FASHION</span>
-                                                                <h4><a href="<%= request.getContextPath() %>/latest_news">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4>
+                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                        of group of friends ting eat. market in.</a>
+                                                                </h4>
                                                                 <p>Jun 19, 2020</p>
                                                             </div>
                                                         </div>
@@ -423,18 +380,22 @@
                                         </div>
                                     </div>
                                     <!-- Card three -->
-                                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                    <div class="tab-pane fade" id="nav-contact" role="tabpanel"
+                                         aria-labelledby="nav-contact-tab">
                                         <div class="row">
                                             <!-- Left Details Caption -->
                                             <div class="col-xl-6">
                                                 <div class="whats-news-single mb-40">
                                                     <div class="whates-img">
-                                                        <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img4.png" alt="">
+                                                        <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img4.png"
+                                                             alt="">
                                                     </div>
                                                     <div class="whates-caption">
-                                                        <h4><a href="#">Secretart for Economic Air plane that looks like</a></h4>
+                                                        <h4><a href="#">Secretart for Economic Air plane that looks
+                                                            like</a></h4>
                                                         <span>by Alice cloe   -   Jun 19, 2020</span>
-                                                        <p>Struggling to sell one multi-million dollar home currently on the market won’t stop actress and singer Jennifer Lopez.</p>
+                                                        <p>Struggling to sell one multi-million dollar home currently on
+                                                            the market won’t stop actress and singer Jennifer Lopez.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -445,11 +406,15 @@
                                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                         <div class="whats-right-single mb-20">
                                                             <div class="whats-right-img">
-                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img1.png" alt="">
+                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img1.png"
+                                                                     alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorb">FASHION</span>
-                                                                <h4><a href="<%= request.getContextPath() %>/latest_news">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4>
+                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                        of group of friends ting eat. market in.</a>
+                                                                </h4>
                                                                 <p>Jun 19, 2020</p>
                                                             </div>
                                                         </div>
@@ -457,11 +422,15 @@
                                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                         <div class="whats-right-single mb-20">
                                                             <div class="whats-right-img">
-                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img2.png" alt="">
+                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img2.png"
+                                                                     alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorb">FASHION</span>
-                                                                <h4><a href="<%= request.getContextPath() %>/latest_news">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4>
+                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                        of group of friends ting eat. market in.</a>
+                                                                </h4>
                                                                 <p>Jun 19, 2020</p>
                                                             </div>
                                                         </div>
@@ -469,11 +438,15 @@
                                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                         <div class="whats-right-single mb-20">
                                                             <div class="whats-right-img">
-                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img3.png" alt="">
+                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img3.png"
+                                                                     alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorg">FASHION</span>
-                                                                <h4><a href="<%= request.getContextPath() %>/latest_news">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4>
+                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                        of group of friends ting eat. market in.</a>
+                                                                </h4>
                                                                 <p>Jun 19, 2020</p>
                                                             </div>
                                                         </div>
@@ -481,11 +454,15 @@
                                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                         <div class="whats-right-single mb-20">
                                                             <div class="whats-right-img">
-                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img4.png" alt="">
+                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img4.png"
+                                                                     alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorr">FASHION</span>
-                                                                <h4><a href="<%= request.getContextPath() %>/latest_news">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4>
+                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                        of group of friends ting eat. market in.</a>
+                                                                </h4>
                                                                 <p>Jun 19, 2020</p>
                                                             </div>
                                                         </div>
@@ -495,18 +472,22 @@
                                         </div>
                                     </div>
                                     <!-- card fure -->
-                                    <div class="tab-pane fade" id="nav-last" role="tabpanel" aria-labelledby="nav-last-tab">
+                                    <div class="tab-pane fade" id="nav-last" role="tabpanel"
+                                         aria-labelledby="nav-last-tab">
                                         <div class="row">
                                             <!-- Left Details Caption -->
                                             <div class="col-xl-6">
                                                 <div class="whats-news-single mb-40">
                                                     <div class="whates-img">
-                                                        <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img2.png" alt="">
+                                                        <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img2.png"
+                                                             alt="">
                                                     </div>
                                                     <div class="whates-caption">
-                                                        <h4><a href="#">Secretart for Economic Air plane that looks like</a></h4>
+                                                        <h4><a href="#">Secretart for Economic Air plane that looks
+                                                            like</a></h4>
                                                         <span>by Alice cloe   -   Jun 19, 2020</span>
-                                                        <p>Struggling to sell one multi-million dollar home currently on the market won’t stop actress and singer Jennifer Lopez.</p>
+                                                        <p>Struggling to sell one multi-million dollar home currently on
+                                                            the market won’t stop actress and singer Jennifer Lopez.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -517,11 +498,15 @@
                                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                         <div class="whats-right-single mb-20">
                                                             <div class="whats-right-img">
-                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img1.png" alt="">
+                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img1.png"
+                                                                     alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorb">FASHION</span>
-                                                                <h4><a href="<%= request.getContextPath() %>/latest_news">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4>
+                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                        of group of friends ting eat. market in.</a>
+                                                                </h4>
                                                                 <p>Jun 19, 2020</p>
                                                             </div>
                                                         </div>
@@ -529,11 +514,15 @@
                                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                         <div class="whats-right-single mb-20">
                                                             <div class="whats-right-img">
-                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img2.png" alt="">
+                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img2.png"
+                                                                     alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorb">FASHION</span>
-                                                                <h4><a href="<%= request.getContextPath() %>/latest_news">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4>
+                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                        of group of friends ting eat. market in.</a>
+                                                                </h4>
                                                                 <p>Jun 19, 2020</p>
                                                             </div>
                                                         </div>
@@ -541,11 +530,15 @@
                                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                         <div class="whats-right-single mb-20">
                                                             <div class="whats-right-img">
-                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img3.png" alt="">
+                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img3.png"
+                                                                     alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorg">FASHION</span>
-                                                                <h4><a href="<%= request.getContextPath() %>/latest_news">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4>
+                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                        of group of friends ting eat. market in.</a>
+                                                                </h4>
                                                                 <p>Jun 19, 2020</p>
                                                             </div>
                                                         </div>
@@ -553,11 +546,15 @@
                                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                         <div class="whats-right-single mb-20">
                                                             <div class="whats-right-img">
-                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img4.png" alt="">
+                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img4.png"
+                                                                     alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorr">FASHION</span>
-                                                                <h4><a href="<%= request.getContextPath() %>/latest_news">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4>
+                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                        of group of friends ting eat. market in.</a>
+                                                                </h4>
                                                                 <p>Jun 19, 2020</p>
                                                             </div>
                                                         </div>
@@ -567,18 +564,22 @@
                                         </div>
                                     </div>
                                     <!-- card Five -->
-                                    <div class="tab-pane fade" id="nav-nav-Sport" role="tabpanel" aria-labelledby="nav-Sports">
+                                    <div class="tab-pane fade" id="nav-nav-Sport" role="tabpanel"
+                                         aria-labelledby="nav-Sports">
                                         <div class="row">
                                             <!-- Left Details Caption -->
                                             <div class="col-xl-6">
                                                 <div class="whats-news-single mb-40">
                                                     <div class="whates-img">
-                                                        <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_news_details1.png" alt="">
+                                                        <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_news_details1.png"
+                                                             alt="">
                                                     </div>
                                                     <div class="whates-caption">
-                                                        <h4><a href="#">Secretart for Economic Air plane that looks like</a></h4>
+                                                        <h4><a href="#">Secretart for Economic Air plane that looks
+                                                            like</a></h4>
                                                         <span>by Alice cloe   -   Jun 19, 2020</span>
-                                                        <p>Struggling to sell one multi-million dollar home currently on the market won’t stop actress and singer Jennifer Lopez.</p>
+                                                        <p>Struggling to sell one multi-million dollar home currently on
+                                                            the market won’t stop actress and singer Jennifer Lopez.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -589,11 +590,15 @@
                                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                         <div class="whats-right-single mb-20">
                                                             <div class="whats-right-img">
-                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img1.png" alt="">
+                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img1.png"
+                                                                     alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorb">FASHION</span>
-                                                                <h4><a href="<%= request.getContextPath() %>/latest_news">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4>
+                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                        of group of friends ting eat. market in.</a>
+                                                                </h4>
                                                                 <p>Jun 19, 2020</p>
                                                             </div>
                                                         </div>
@@ -601,11 +606,15 @@
                                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                         <div class="whats-right-single mb-20">
                                                             <div class="whats-right-img">
-                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img2.png" alt="">
+                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img2.png"
+                                                                     alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorb">FASHION</span>
-                                                                <h4><a href="<%= request.getContextPath() %>/latest_news">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4>
+                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                        of group of friends ting eat. market in.</a>
+                                                                </h4>
                                                                 <p>Jun 19, 2020</p>
                                                             </div>
                                                         </div>
@@ -613,11 +622,15 @@
                                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                         <div class="whats-right-single mb-20">
                                                             <div class="whats-right-img">
-                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img3.png" alt="">
+                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img3.png"
+                                                                     alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorg">FASHION</span>
-                                                                <h4><a href="<%= request.getContextPath() %>/latest_news">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4>
+                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                        of group of friends ting eat. market in.</a>
+                                                                </h4>
                                                                 <p>Jun 19, 2020</p>
                                                             </div>
                                                         </div>
@@ -625,11 +638,15 @@
                                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                         <div class="whats-right-single mb-20">
                                                             <div class="whats-right-img">
-                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img4.png" alt="">
+                                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/whats_right_img4.png"
+                                                                     alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
                                                                 <span class="colorr">FASHION</span>
-                                                                <h4><a href="<%= request.getContextPath() %>/latest_news">Portrait of group of friends ting eat. market in.</a></h4>
+                                                                <h4>
+                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                        of group of friends ting eat. market in.</a>
+                                                                </h4>
                                                                 <p>Jun 19, 2020</p>
                                                             </div>
                                                         </div>
@@ -654,7 +671,9 @@
                         <div class="single-box">
                             <div class="follow-us d-flex align-items-center">
                                 <div class="follow-social">
-                                    <a href="#"><img src="<%= request.getContextPath() %>/../../assets/img/news/icon-fb.png" alt=""></a>
+                                    <a href="#"><img
+                                            src="<%= request.getContextPath() %>/../../assets/img/news/icon-fb.png"
+                                            alt=""></a>
                                 </div>
                                 <div class="follow-count">
                                     <span>8,045</span>
@@ -674,10 +693,12 @@
                         <div class="most-recent mb-40">
                             <!-- Add dynamic data here from controller if needed -->
                             <div class="most-recent-img">
-                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/most_recent.png" alt="">
+                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/most_recent.png"
+                                     alt="">
                                 <div class="most-recent-cap">
                                     <span class="bgbeg">Vogue</span>
-                                    <h4><a href="<%= request.getContextPath() %>/latest_news">What to Wear: 9+ Cute Work <br> Outfits to Wear This.</a></h4>
+                                    <h4><a href="<%= request.getContextPath() %>/latest_news">What to Wear: 9+ Cute Work
+                                        <br> Outfits to Wear This.</a></h4>
                                     <p>Jhon | 2 hours ago</p>
                                 </div>
                             </div>
@@ -686,10 +707,12 @@
                         <div class="most-recent-single">
                             <!-- Add dynamic data here from controller if needed -->
                             <div class="most-recent-images">
-                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/most_recent1.png" alt="">
+                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/most_recent1.png"
+                                     alt="">
                             </div>
                             <div class="most-recent-capt">
-                                <h4><a href="<%= request.getContextPath() %>/latest_news">Scarlett’s disappointment at latest accolade</a></h4>
+                                <h4><a href="<%= request.getContextPath() %>/latest_news">Scarlett’s disappointment at
+                                    latest accolade</a></h4>
                                 <p>Jhon | 2 hours ago</p>
                             </div>
                         </div>
@@ -697,10 +720,12 @@
                         <div class="most-recent-single">
                             <!-- Add dynamic data here from controller if needed -->
                             <div class="most-recent-images">
-                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/most_recent2.png" alt="">
+                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/most_recent2.png"
+                                     alt="">
                             </div>
                             <div class="most-recent-capt">
-                                <h4><a href="<%= request.getContextPath() %>/latest_news">Most Beautiful Things to Do in Sidney with Your BF</a></h4>
+                                <h4><a href="<%= request.getContextPath() %>/latest_news">Most Beautiful Things to Do in
+                                    Sidney with Your BF</a></h4>
                                 <p>Jhon | 3 hours ago</p>
                             </div>
                         </div>
@@ -739,7 +764,8 @@
                                         <!-- Single -->
                                         <div class="weekly2-single">
                                             <div class="weekly2-img">
-                                                <img src="<%= request.getContextPath() %>/assets/img/gallery/weeklyNews1.png" alt="">
+                                                <img src="<%= request.getContextPath() %>/assets/img/gallery/weeklyNews1.png"
+                                                     alt="">
                                             </div>
                                             <div class="weekly2-caption">
                                                 <h4><a href="#">Scarlett’s disappointment at latest accolade</a></h4>
@@ -749,7 +775,8 @@
                                         <!-- Single -->
                                         <div class="weekly2-single">
                                             <div class="weekly2-img">
-                                                <img src="<%= request.getContextPath() %>/assets/img/gallery/weeklyNews2.png" alt="">
+                                                <img src="<%= request.getContextPath() %>/assets/img/gallery/weeklyNews2.png"
+                                                     alt="">
                                             </div>
                                             <div class="weekly2-caption">
                                                 <h4><a href="#">Scarlett’s disappointment at latest accolade</a></h4>
@@ -759,7 +786,8 @@
                                         <!-- Single -->
                                         <div class="weekly2-single">
                                             <div class="weekly2-img">
-                                                <img src="<%= request.getContextPath() %>/assets/img/gallery/weeklyNews3.png" alt="">
+                                                <img src="<%= request.getContextPath() %>/assets/img/gallery/weeklyNews3.png"
+                                                     alt="">
                                             </div>
                                             <div class="weekly2-caption">
                                                 <h4><a href="#">Scarlett’s disappointment at latest accolade</a></h4>
@@ -769,7 +797,8 @@
                                         <!-- Single -->
                                         <div class="weekly2-single">
                                             <div class="weekly2-img">
-                                                <img src="<%= request.getContextPath() %>/assets/img/gallery/weeklyNews2.png" alt="">
+                                                <img src="<%= request.getContextPath() %>/assets/img/gallery/weeklyNews2.png"
+                                                     alt="">
                                             </div>
                                             <div class="weekly2-caption">
                                                 <h4><a href="#">Scarlett’s disappointment at latest accolade</a></h4>
@@ -812,7 +841,9 @@
                                 <div class="what-cap">
                                     <h4><a href="latest_news">What to Expect From the 2020 Oscar Nominations</a></h4>
                                     <p>Jun 19, 2020</p>
-                                    <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span class="flaticon-play-button"></span></a>
+                                    <a class="popup-video btn-icon"
+                                       href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span
+                                            class="flaticon-play-button"></span></a>
                                 </div>
                             </div>
                             <!-- Single -->
@@ -824,7 +855,8 @@
                                 <div class="what-cap">
                                     <h4><a href="latest_news">What to Expect From the 2020 Oscar Nominations</a></h4>
                                     <p>Jun 19, 2020</p>
-                                    <a class="popup-video" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span class="flaticon-play-button"></span></a>
+                                    <a class="popup-video" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span
+                                            class="flaticon-play-button"></span></a>
                                 </div>
                             </div>
                             <!-- Single -->
@@ -836,7 +868,8 @@
                                 <div class="what-cap">
                                     <h4><a href="latest_news">What to Expect From the 2020 Oscar Nominations</a></h4>
                                     <p>Jun 19, 2020</p>
-                                    <a class="popup-video" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span class="flaticon-play-button"></span></a>
+                                    <a class="popup-video" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span
+                                            class="flaticon-play-button"></span></a>
                                 </div>
                             </div>
                             <!-- Single -->
@@ -848,7 +881,8 @@
                                 <div class="what-cap">
                                     <h4><a href="latest_news">What to Expect From the 2020 Oscar Nominations</a></h4>
                                     <p>Jun 19, 2020</p>
-                                    <a class="popup-video" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span class="flaticon-play-button"></span></a>
+                                    <a class="popup-video" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span
+                                            class="flaticon-play-button"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -868,35 +902,40 @@
                         <!-- Single video item -->
                         <div class="video-items text-center">
                             <video controls>
-                                <source src="<%= request.getContextPath() %>/../../assets/video/news2.mp4" type="video/mp4">
+                                <source src="<%= request.getContextPath() %>/../../assets/video/news2.mp4"
+                                        type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                         <!-- Single video item -->
                         <div class="video-items text-center">
                             <video controls>
-                                <source src="<%= request.getContextPath() %>/../../assets/video/news1.mp4" type="video/mp4">
+                                <source src="<%= request.getContextPath() %>/../../assets/video/news1.mp4"
+                                        type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                         <!-- Single video item -->
                         <div class="video-items text-center">
                             <video controls>
-                                <source src="<%= request.getContextPath() %>/../../assets/video/news3.mp4" type="video/mp4">
+                                <source src="<%= request.getContextPath() %>/../../assets/video/news3.mp4"
+                                        type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                         <!-- Single video item -->
                         <div class="video-items text-center">
                             <video controls>
-                                <source src="<%= request.getContextPath() %>/../../assets/video/news1.mp4" type="video/mp4">
+                                <source src="<%= request.getContextPath() %>/../../assets/video/news1.mp4"
+                                        type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                         <!-- Single video item -->
                         <div class="video-items text-center">
                             <video controls>
-                                <source src="<%= request.getContextPath() %>/../../assets/video/news3.mp4" type="video/mp4">
+                                <source src="<%= request.getContextPath() %>/../../assets/video/news3.mp4"
+                                        type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -910,7 +949,8 @@
                             <!-- Single video -->
                             <div class="single-video">
                                 <video controls>
-                                    <source src="<%= request.getContextPath() %>/../../assets/video/news2.mp4" type="video/mp4">
+                                    <source src="<%= request.getContextPath() %>/../../assets/video/news2.mp4"
+                                            type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                                 <div class="video-intro">
@@ -920,7 +960,8 @@
                             <!-- Single video -->
                             <div class="single-video">
                                 <video controls>
-                                    <source src="<%= request.getContextPath() %>/../../assets/video/news1.mp4" type="video/mp4">
+                                    <source src="<%= request.getContextPath() %>/../../assets/video/news1.mp4"
+                                            type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                                 <div class="video-intro">
@@ -930,7 +971,8 @@
                             <!-- Single video -->
                             <div class="single-video">
                                 <video controls>
-                                    <source src="<%= request.getContextPath() %>/../../assets/video/news3.mp4" type="video/mp4">
+                                    <source src="<%= request.getContextPath() %>/../../assets/video/news3.mp4"
+                                            type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                                 <div class="video-intro">
@@ -940,7 +982,8 @@
                             <!-- Single video -->
                             <div class="single-video">
                                 <video controls>
-                                    <source src="<%= request.getContextPath() %>/../../assets/video/news1.mp4" type="video/mp4">
+                                    <source src="<%= request.getContextPath() %>/../../assets/video/news1.mp4"
+                                            type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                                 <div class="video-intro">
@@ -950,7 +993,8 @@
                             <!-- Single video -->
                             <div class="single-video">
                                 <video controls>
-                                    <source src="<%= request.getContextPath() %>/../../assets/video/news3.mp4" type="video/mp4">
+                                    <source src="<%= request.getContextPath() %>/../../assets/video/news3.mp4"
+                                            type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                                 <div class="video-intro">
@@ -979,50 +1023,60 @@
                                         <!-- Add dynamic data here from controller if needed -->
                                         <div class="weekly3-single">
                                             <div class="weekly3-img">
-                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/weekly2News1.png" alt="">
+                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/weekly2News1.png"
+                                                     alt="">
                                             </div>
                                             <div class="weekly3-caption">
-                                                <h4><a href="latest_news">What to Expect From the 2020 Oscar Nominations</a></h4>
+                                                <h4><a href="latest_news">What to Expect From the 2020 Oscar
+                                                    Nominations</a></h4>
                                                 <p>19 Jan 2020</p>
                                             </div>
                                         </div>
                                         <!-- Add dynamic data here from controller if needed -->
                                         <div class="weekly3-single">
                                             <div class="weekly3-img">
-                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/weekly2News2.png" alt="">
+                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/weekly2News2.png"
+                                                     alt="">
                                             </div>
                                             <div class="weekly3-caption">
-                                                <h4><a href="latest_news">What to Expect From the 2020 Oscar Nominations</a></h4>
+                                                <h4><a href="latest_news">What to Expect From the 2020 Oscar
+                                                    Nominations</a></h4>
                                                 <p>19 Jan 2020</p>
                                             </div>
                                         </div>
                                         <!-- Add dynamic data here from controller if needed -->
                                         <div class="weekly3-single">
                                             <div class="weekly3-img">
-                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/weekly2News3.png" alt="">
+                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/weekly2News3.png"
+                                                     alt="">
                                             </div>
                                             <div class="weekly3-caption">
-                                                <h4><a href="latest_news">What to Expect From the 2020 Oscar Nominations</a></h4>
+                                                <h4><a href="latest_news">What to Expect From the 2020 Oscar
+                                                    Nominations</a></h4>
                                                 <p>19 Jan 2020</p>
                                             </div>
                                         </div>
                                         <!-- Add dynamic data here from controller if needed -->
                                         <div class="weekly3-single">
                                             <div class="weekly3-img">
-                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/weekly2News4.png" alt="">
+                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/weekly2News4.png"
+                                                     alt="">
                                             </div>
                                             <div class="weekly3-caption">
-                                                <h4><a href="latest_news">What to Expect From the 2020 Oscar Nominations</a></h4>
+                                                <h4><a href="latest_news">What to Expect From the 2020 Oscar
+                                                    Nominations</a></h4>
                                                 <p>19 Jan 2020</p>
                                             </div>
                                         </div>
                                         <!-- Add dynamic data here from controller if needed -->
                                         <div class="weekly3-single">
                                             <div class="weekly3-img">
-                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/weekly2News2.png" alt="">
+                                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/weekly2News2.png"
+                                                     alt="">
                                             </div>
                                             <div class="weekly3-caption">
-                                                <h4><a href="latest_news">What to Expect From the 2020 Oscar Nominations</a></h4>
+                                                <h4><a href="latest_news">What to Expect From the 2020 Oscar
+                                                    Nominations</a></h4>
                                                 <p>19 Jan 2020</p>
                                             </div>
                                         </div>
@@ -1051,102 +1105,7 @@
     </div>
     <!-- banner-last End -->
 </main>
-<footer>
-    <!-- Footer Start-->
-    <div class="footer-main footer-bg">
-        <div class="footer-area footer-padding">
-            <div class="container">
-                <div class="row d-flex justify-content-between">
-                    <div class="col-xl-3 col-lg-3 col-md-5 col-sm-8">
-                        <div class="single-footer-caption mb-50">
-                            <div class="single-footer-caption mb-30">
-                                <!-- logo -->
-                                <div class="footer-logo">
-                                    <a href="index"><img src="<%= request.getContextPath() %>/../../assets/img/logo/logo2_footer.png" alt=""></a>
-                                </div>
-                                <div class="footer-tittle">
-                                    <div class="footer-pera">
-                                        <p class="info1">Lorem ipsum dolor sit amet, nsectetur adipiscing elit, sed do
-                                            eiusmod tempor incididunt ut labore.</p>
-                                        <p class="info2">198 West 21th Street, Suite 721 New York,NY 10010</p>
-                                        <p class="info2">Phone: +95 (0) 123 456 789 Cell: +95 (0) 123 456 789</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-5 col-sm-7">
-                        <div class="single-footer-caption mb-50">
-                            <div class="footer-tittle">
-                                <h4>Popular post</h4>
-                            </div>
-                            <!-- Popular post -->
-                            <!-- Add dynamic data from controller if needed -->
-                            <div class="whats-right-single mb-20">
-                                <div class="whats-right-img">
-                                    <img src="<%= request.getContextPath() %>/../../assets/img/gallery/footer_post1.png" alt="">
-                                </div>
-                                <div class="whats-right-cap">
-                                    <h4><a href="<%= request.getContextPath() %>/latest_news">Scarlett’s disappointment at latest accolade</a></h4>
-                                    <p>Jhon | 2 hours ago</p>
-                                </div>
-                            </div>
-                            <!-- Popular post -->
-                            <div class="whats-right-single mb-20">
-                                <div class="whats-right-img">
-                                    <img src="<%= request.getContextPath() %>/../../assets/img/gallery/footer_post2.png" alt="">
-                                </div>
-                                <div class="whats-right-cap">
-                                    <h4><a href="<%= request.getContextPath() %>/latest_news">Scarlett’s disappointment at latest accolade</a></h4>
-                                    <p>Jhon | 2 hours ago</p>
-                                </div>
-                            </div>
-                            <!-- Popular post -->
-                            <div class="whats-right-single mb-20">
-                                <div class="whats-right-img">
-                                    <img src="<%= request.getContextPath() %>/../../assets/img/gallery/footer_post3.png" alt="">
-                                </div>
-                                <div class="whats-right-cap">
-                                    <h4><a href="<%= request.getContextPath() %>/latest_news">Scarlett’s disappointment at latest accolade</a></h4>
-                                    <p>Jhon | 2 hours ago</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7">
-                        <div class="single-footer-caption mb-50">
-                            <div class="banner">
-                                <img src="<%= request.getContextPath() %>/../../assets/img/gallery/body_card4.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- footer-bottom aera -->
-        <div class="footer-bottom-area footer-bg">
-            <div class="container">
-                <div class="footer-border">
-                    <div class="row d-flex align-items-center">
-                        <div class="col-xl-12 ">
-                            <div class="footer-copy-right text-center">
-                                <p>
-                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                                    All rights reserved | This template is made with <i class="fa fa-heart"
-                                                                                        aria-hidden="true"></i> by <a
-                                        href="https://colorlib.com" target="_blank">Colorlib</a>
-                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End-->
-</footer>
+<jsp:include page="footer.jsp"/>
 <!-- Search model Begin -->
 <div class="search-model-box">
     <div class="d-flex align-items-center h-100 justify-content-center">
