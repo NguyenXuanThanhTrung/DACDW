@@ -452,7 +452,7 @@
                     </div>
                     <div class="input-group-icon mt-10">
                         <div class="icon"><i class="fa fa-plane" aria-hidden="true"></i></div>
-                        <div class="form-select" id="default-select">
+                        <div class="form-select" id="default-select3">
                             <select>
                                 <option value="1">City</option>
                                 <option value="1">Dhaka</option>
@@ -464,7 +464,7 @@
                     </div>
                     <div class="input-group-icon mt-10">
                         <div class="icon"><i class="fa fa-globe" aria-hidden="true"></i></div>
-                        <div class="form-select" id="default-select">
+                        <div class="form-select" id="default-select2">
                             <select>
                                 <option value="1">Country</option>
                                 <option value="1">Bangladesh</option>
