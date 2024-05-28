@@ -8,12 +8,12 @@
 		<version>2.6.7</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>SpringBootJSP</artifactId>
+	<groupId>fit.hcmuaf</groupId>
+	<artifactId>News</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>SpringBootJSP</name>
-	<description>Demo project for Spring Boot</description>
+	<name>News</name>
+	<description>News online web</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>

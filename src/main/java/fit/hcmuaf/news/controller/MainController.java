@@ -1,4 +1,4 @@
-package com.example.sbjsp.controller;
+package fit.hcmuaf.news.controller;
 
 import java.util.ArrayList;
 import java.util.List;
