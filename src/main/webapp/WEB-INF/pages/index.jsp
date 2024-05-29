@@ -14,18 +14,18 @@
     <link rel="shortcut icon" type="image/x-icon" href="<%= request.getContextPath() %>/../../assets/img/favicon.ico">
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/../../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/../../assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/../../assets/css/ticker-style.css">
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/../../assets/css/flaticon.css">
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/../../assets/css/slicknav.css">
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/../../assets/css/animate.min.css">
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/../../assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/../../assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/../../assets/css/themify-icons.css">
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/../../assets/css/slick.css">
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/../../assets/css/nice-select.css">
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../assets/css/ticker-style.css">
+    <link rel="stylesheet" href="../../assets/css/flaticon.css">
+    <link rel="stylesheet" href="../../assets/css/slicknav.css">
+    <link rel="stylesheet" href="../../assets/css/animate.min.css">
+    <link rel="stylesheet" href="../../assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../../assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../assets/css/themify-icons.css">
+    <link rel="stylesheet" href="../../assets/css/slick.css">
+    <link rel="stylesheet" href="../../assets/css/nice-select.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 
 <body>
