@@ -24,6 +24,17 @@
             <input type="email" placeholder="Email" />
             <input type="password" placeholder="Password" />
             <input type="password" placeholder="Confirm Password" id="confirmPassword" />
+            <div id="passwordError" class="error-message"></div>
+            <br>
+            <style>
+                .error-message {
+                    color: red; /* Đặt màu chữ cho thông báo lỗi */
+                    background-color: rgba(255, 0, 0, 0.1); /* Đặt màu nền cho thông báo lỗi */
+                    padding: 5px; /* Tăng độ rộng và độ cao của phần tử chứa thông báo lỗi */
+                    margin-top: 5px; /* Tăng khoảng cách giữa ô nhập liệu và thông báo lỗi */
+                    border-radius: 3px; /* Làm tròn các góc của phần tử chứa thông báo lỗi */
+                }
+            </style>
             <button id="signUpButton">Sign Up</button>
         </form>
     </div>
@@ -57,70 +68,64 @@
         window.location.href = 'login';
     });
 </script>
+
 <script>
-    $(document).ready(function() {
-        $('#username').on('blur', function() {
-            var username = $(this).val();
-            $.ajax({
-                url: '/checkUsername',
-                type: 'GET',
-                data: { username: username },
-                success: function(response) {
-                    var result = JSON.parse(response);
-                    if (result.exists) {
-                        // Tên người dùng đã tồn tại
-                        alert('Tên người dùng đã tồn tại!');
-                    }
-                }
-            });
-        });
-    });
+    const signUpForm = document.querySelector('.sign-up-container form');
+    const confirmPasswordInput = document.getElementById('confirmPassword');
+    const passwordError = document.getElementById('passwordError');
 
-</script>
-<script>
-    $(document).ready(function() {
-        $('#signUpButton').click(function(event) {
-            event.preventDefault();
-            var name = $('input[placeholder="Name"]').val();
-            var email = $('input[placeholder="Email"]').val();
-            var password = $('input[placeholder="Password"]').val();
-            var confirmPassword = $('#confirmPassword').val();
+    signUpForm.addEventListener('submit', (event) => {
+        event.preventDefault();
 
-            if (name === "" || email === "" || password === "" || confirmPassword === "") {
-                alert("All fields are required.");
-                return;
+        const name = signUpForm.querySelector('input[type="text"]').value;
+        const email = signUpForm.querySelector('input[type="email"]').value;
+        const password = signUpForm.querySelector('input[type="password"]').value;
+        const confirmPassword = confirmPasswordInput.value;
+
+        // Biểu thức chính quy để kiểm tra định dạng email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Kiểm tra xem email và password có được nhập vào không
+        if (!name || !email || !password || !confirmPassword) {
+            passwordError.innerText = 'Vui lòng điền đầy đủ thông tin.';
+            return;
+        }
+
+        // Kiểm tra định dạng email
+        if (!emailRegex.test(email)) {
+            passwordError.innerText = 'Địa chỉ email không hợp lệ.';
+            return;
+        }
+
+        // Kiểm tra xem password có ít nhất 8 kí tự không
+        if (password.length < 8) {
+            passwordError.innerText = 'Mật khẩu phải có ít nhất 8 kí tự.';
+            return;
+        }
+
+        // Kiểm tra xem password và confirm password có khớp nhau không
+        if (password !== confirmPassword) {
+            passwordError.innerText = 'Mật khẩu và xác nhận mật khẩu không khớp nhau.';
+            return;
+        }
+        passwordError.innerText = '';
+
+        $.ajax({
+            url: '/signUp', // Địa chỉ của endpoint xử lý đăng ký
+            method: 'POST', // Hoặc 'GET' tùy thuộc vào cách bạn đã thiết lập máy chủ
+            data: {name:name, email: email, password: password, confirmPassword: confirmPassword }, // Dữ liệu gửi đi
+            success: function(response) {
+                // Xử lý kết quả thành công
+                console.log('Sign up successful');
+                // Redirect hoặc thực hiện các hành động khác tại đây
+            },
+            error: function(xhr, status, error) {
+                // Xử lý lỗi
+                console.error('Sign up failed:', error);
             }
-
-            if (password.length < 8) {
-                alert("Password must be at least 8 characters long.");
-                return;
-            }
-
-            if (password !== confirmPassword) {
-                alert("Passwords do not match.");
-                return;
-            }
-
-            $.ajax({
-                url: '/check-username',
-                type: 'POST',
-                contentType: 'application/json',
-                data: JSON.stringify({ email: email }),
-                success: function(response) {
-                    if (response.exists) {
-                        alert("Email is already registered.");
-                    } else {
-                        $('form').submit();
-                    }
-                },
-                error: function() {
-                    alert("Error checking email.");
-                }
-            });
         });
     });
 </script>
-
 <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
