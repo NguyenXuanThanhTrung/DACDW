@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: ABC
-  Date: 5/8/2024
-  Time: 4:11 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <header>
@@ -80,21 +73,35 @@
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-4">
-                            <div class="header-right f-right d-none d-lg-block">
+                            <div class="header-right f-right d-none d-lg-block" style="display: flex; align-items: center;">
                                 <!-- Header Social -->
-                                <ul class="header-social">
-                                    <li><a href="https://www.fb.com/sai4ull"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                                </ul>
+                                <div style="display: inline-block; margin-right: 10px;">
+                                    <a href="https://www.fb.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                </div>
+                                <div style="display: inline-block; margin-right: 10px;">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                                <div style="display: inline-block; margin-right: 10px;">
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div style="display: inline-block; margin-right: 10px;">
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </div>
+
                                 <!-- Search Nav -->
-                                <div class="nav-search search-switch">
-                                    <i class="fa fa-search"></i>
+                                <div style="display: inline-block;">
+                                    <div class="nav-search search-switch">
+                                        <i class="fa fa-search"></i>
+                                    </div>
+                                </div>
+
+                                <!-- Login Icon -->
+                                <div style="display: inline-block; margin-left: 10px;">
+                                    <a href="<%= request.getContextPath() %>/login"><i class="fa fa-sign-in-alt"></i></a>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Mobile Menu -->
+
+                            <!-- Mobile Menu -->
                         <div class="col-12">
                             <div class="mobile_menu d-block d-md-none"></div>
                         </div>
