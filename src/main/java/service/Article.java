@@ -10,6 +10,9 @@ public  class Article {
         this.timestamp = timestamp;
     }
 
+    public Article(String title, String aliceCloe, String timestamp, String s, String s1) {
+    }
+
     public String getTitle() {
         return title;
     }
