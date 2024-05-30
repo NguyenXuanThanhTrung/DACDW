@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="../../assets/css/nice-select.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/contact.css">
 </head>
 
 <body>

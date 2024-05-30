@@ -1,0 +1,8 @@
+.error.required {
+    color: red;
+}
+
+.error.minlength {
+    color: red;
+}
+

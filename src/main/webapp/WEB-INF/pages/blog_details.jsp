@@ -23,6 +23,12 @@
    <link rel="stylesheet" href="../../assets/css/slick.css">
    <link rel="stylesheet" href="../../assets/css/nice-select.css">
    <link rel="stylesheet" href="../../assets/css/style.css">
+   <link rel="stylesheet" href="../../assets/css/contact.css">
+   <style>
+      .error-message {
+         color: red;
+      }
+   </style>
 </head>
 
 <body>
@@ -406,7 +412,46 @@
 <!-- Search model end -->
 
    <!-- All JS Custom Plugins Link Here here -->
-   
+<!-- Script for form validation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+<script>
+   $(document).ready(function(){
+      $('#commentForm').validate({
+         rules: {
+            comment: {
+               required: true,
+               minlength: 20
+            },
+            name: {
+               required: true
+            },
+            email: {
+               required: true,
+               email: true
+            }
+         },
+         messages: {
+            comment: {
+               required: "<span class='error-message'>Please write your comment.</span>",
+               minlength: "<span class='error-message'>Your comment must be at least 20 characters long.</span>"
+            },
+            name: {
+               required: "<span class='error-message'>Please enter your name.</span>"
+            },
+            email: {
+               required: "<span class='error-message'>Please enter your email address.</span>",
+               email: "<span class='error-message'>Please enter a valid email address.</span>"
+            }
+
+         },
+         submitHandler: function(form) {
+            // Xử lý gửi form bằng AJAX hoặc một hành động khác
+            alert('Form submitted successfully!');
+         }
+      });
+   });
+</script>
    <script src="../../assets/js/vendor/modernizr-3.5.0.min.js"></script>
    <!-- Jquery, Popper, Bootstrap -->
    <script src="../../assets/js/vendor/jquery-1.12.4.min.js"></script>
