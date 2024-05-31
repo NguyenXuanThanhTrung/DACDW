@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
@@ -52,7 +53,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="contact-title">Get in Touch</h2>
+                        <h2 class="contact-title" data-i18n="contact.title">Get in Touch</h2>
                     </div>
                     <div class="col-lg-8">
                         <form class="form-contact contact_form" action="contact_process.php" method="post"
@@ -63,7 +64,8 @@
                                         <textarea class="form-control w-100" name="message" id="message" cols="30"
                                                   rows="9" onfocus="this.placeholder = ''"
                                                   onblur="this.placeholder = 'Enter Message'"
-                                                  placeholder=" Enter Message"></textarea>
+                                                  data-i18n-placeholder="form.message.placeholder"
+                                                  placeholder="Enter Message"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -71,6 +73,7 @@
                                         <input class="form-control valid" name="name" id="name" type="text"
                                                onfocus="this.placeholder = ''"
                                                onblur="this.placeholder = 'Enter your name'"
+                                               data-i18n-placeholder="form.name.placeholder"
                                                placeholder="Enter your name">
                                     </div>
                                 </div>
@@ -78,19 +81,23 @@
                                     <div class="form-group">
                                         <input class="form-control valid" name="email" id="email" type="email"
                                                onfocus="this.placeholder = ''"
-                                               onblur="this.placeholder = 'Enter email address'" placeholder="Email">
+                                               onblur="this.placeholder = 'Enter email address'"
+                                               data-i18n-placeholder="form.email.placeholder"
+                                               placeholder="Enter email address">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
                                         <input class="form-control" name="subject" id="subject" type="text"
                                                onfocus="this.placeholder = ''"
-                                               onblur="this.placeholder = 'Enter Subject'" placeholder="Enter Subject">
+                                               onblur="this.placeholder = 'Enter Subject'"
+                                               data-i18n-placeholder="form.subject.placeholder"
+                                               placeholder="Enter Subject">
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group mt-3">
-                                <button type="submit" class="button button-contactForm boxed-btn">Send</button>
+                                <button type="submit" class="button button-contactForm boxed-btn" data-i18n="form.submit.button">Send</button>
                             </div>
                         </form>
                     </div>
@@ -98,22 +105,22 @@
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-home"></i></span>
                             <div class="media-body">
-                                <h3>Buttonwood, California.</h3>
-                                <p>Rosemead, CA 91770</p>
+                                <h3 data-i18n="address.title">Buttonwood, California.</h3>
+                                <p data-i18n="address.description">Rosemead, CA 91770</p>
                             </div>
                         </div>
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-tablet"></i></span>
                             <div class="media-body">
-                                <h3>+1 253 565 2365</h3>
-                                <p>Mon to Fri 9am to 6pm</p>
+                                <h3 data-i18n="phone.title">+1 253 565 2365</h3>
+                                <p data-i18n="phone.description">Mon to Fri 9am to 6pm</p>
                             </div>
                         </div>
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-email"></i></span>
                             <div class="media-body">
-                                <h3>support@colorlib.com</h3>
-                                <p>Send us your query anytime!</p>
+                                <h3 data-i18n="email.title">support@colorlib.com</h3>
+                                <p data-i18n="email.description">Send us your query anytime!</p>
                             </div>
                         </div>
                     </div>
@@ -169,6 +176,35 @@
 <!-- Jquery Plugins, main Jquery -->
 <script src="../../assets/js/plugins.js"></script>
 <script src="../../assets/js/main.js"></script>
+
+<!-- Custom JS for language change -->
+<script>
+    var currentLang = 'en';
+
+    function loadMessages(lang) {
+        $.getJSON('../../assets/lang/messages_' + lang + '.json', function(data) {
+            $('[data-i18n]').each(function() {
+                var key = $(this).data('i18n');
+                $(this).text(data[key]);
+            });
+
+            $('[data-i18n-placeholder]').each(function() {
+                var key = $(this).data('i18n-placeholder');
+                $(this).attr('placeholder', data[key]);
+            });
+        });
+    }
+
+    $(document).ready(function() {
+        loadMessages(currentLang);
+
+        $('#change-lang a').click(function(e) {
+            e.preventDefault();
+            currentLang = $(this).data('lang');
+            loadMessages(currentLang);
+        });
+    });
+</script>
 
 </body>
 
