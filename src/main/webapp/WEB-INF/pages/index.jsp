@@ -59,12 +59,12 @@
                                              alt="">
                                         <div class="trend-top-cap">
                                         <span class="bgr" data-animation="fadeInUp" data-delay=".2s"
-                                              data-duration="1000ms">Business</span>
+                                              data-duration="1000ms" data-i18n="business.title">Business</span>
                                             <h2><a href="<%= request.getContextPath() %>/latest_news"
                                                    data-animation="fadeInUp" data-delay=".4s"
-                                                   data-duration="1000ms">Anna Lora Stuns In White At Her Australian
+                                                   data-duration="1000ms" data-i18n="business.text1">Anna Lora Stuns In White At Her Australian
                                                 Premiere</a></h2>
-                                            <p data-animation="fadeInUp" data-delay=".6s" data-duration="1000ms">by
+                                            <p data-animation="fadeInUp" data-delay=".6s" data-duration="1000ms" data-i18n="business.text2">by
                                                 Alice cloe - Jun 19, 2020</p>
                                         </div>
                                     </div>
@@ -78,12 +78,12 @@
                                              alt="">
                                         <div class="trend-top-cap">
                                         <span class="bgr" data-animation="fadeInUp" data-delay=".2s"
-                                              data-duration="1000ms">Business</span>
+                                              data-duration="1000ms" data-i18n="business.title">Business</span>
                                             <h2><a href="<%= request.getContextPath() %>/latest_news"
                                                    data-animation="fadeInUp" data-delay=".4s"
-                                                   data-duration="1000ms">Anna Lora Stuns In White At Her Australian
+                                                   data-duration="1000ms" data-i18n="business.text1">Anna Lora Stuns In White At Her Australian
                                                 Premiere</a></h2>
-                                            <p data-animation="fadeInUp" data-delay=".6s" data-duration="1000ms">by
+                                            <p data-animation="fadeInUp" data-delay=".6s" data-duration="1000ms" data-i18n="business.text2">by
                                                 Alice cloe - Jun 19, 2020</p>
                                         </div>
                                     </div>
@@ -97,12 +97,12 @@
                                              alt="">
                                         <div class="trend-top-cap">
                                         <span class="bgr" data-animation="fadeInUp" data-delay=".2s"
-                                              data-duration="1000ms">Business</span>
+                                              data-duration="1000ms" data-i18n="business.title">Business</span>
                                             <h2><a href="<%= request.getContextPath() %>/latest_news"
                                                    data-animation="fadeInUp" data-delay=".4s"
-                                                   data-duration="1000ms">Anna Lora Stuns In White At Her Australian
+                                                   data-duration="1000ms" data-i18n="business.text1">Anna Lora Stuns In White At Her Australian
                                                 Premiere</a></h2>
-                                            <p data-animation="fadeInUp" data-delay=".6s" data-duration="1000ms">by
+                                            <p data-animation="fadeInUp" data-delay=".6s" data-duration="1000ms" data-i18n="business.text2">by
                                                 Alice cloe - Jun 19, 2020</p>
                                         </div>
                                     </div>
@@ -120,11 +120,11 @@
                                         <img src="<%= request.getContextPath() %>/../../assets/img/trending/trending_top3.jpg"
                                              alt="">
                                         <div class="trend-top-cap trend-top-cap2">
-                                            <span class="bgb">FASHION</span>
-                                            <h2><a href="<%= request.getContextPath() %>/latest_news">Secretart for
+                                            <span class="bgb" data-i18n="fashion.title">FASHION</span>
+                                            <h2><a href="<%= request.getContextPath() %>/latest_news" data-i18n="fashion.text1">Secretart for
                                                 Economic Air
                                                 plane that looks like</a></h2>
-                                            <p>by Alice cloe - Jun 19, 2020</p>
+                                            <p data-i18n="fashion.text2">by Alice cloe - Jun 19, 2020</p>
                                         </div>
                                     </div>
                                 </div>
@@ -135,11 +135,11 @@
                                         <img src="<%= request.getContextPath() %>/../../assets/img/trending/trending_top4.jpg"
                                              alt="">
                                         <div class="trend-top-cap trend-top-cap2">
-                                            <span class="bgg">TECH </span>
-                                            <h2><a href="<%= request.getContextPath() %>/latest_news">Secretart for
+                                            <span class="bgg" data-i18n="tech.title">TECH </span>
+                                            <h2><a href="<%= request.getContextPath() %>/latest_news" data-i18n="tech.text1">Secretart for
                                                 Economic Air plane that looks
                                                 like</a></h2>
-                                            <p>by Alice cloe - Jun 19, 2020</p>
+                                            <p data-i18n="tech.text2">by Alice cloe - Jun 19, 2020</p>
                                         </div>
                                     </div>
                                 </div>
@@ -161,7 +161,7 @@
                         <div class="row justify-content-between align-items-end mb-15">
                             <div class="col-xl-4">
                                 <div class="section-tittle mb-30">
-                                    <h3>Whats New</h3>
+                                    <h3 data-i18n="whatsnew.title">Whats New</h3>
                                 </div>
                             </div>
                             <div class="col-xl-8 col-md-9">
@@ -171,19 +171,19 @@
                                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                             <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
                                                href="#nav-home" role="tab" aria-controls="nav-home"
-                                               aria-selected="true">Lifestyle</a>
+                                               aria-selected="true" data-i18n="whatsnew.button1">Lifestyle</a>
                                             <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
                                                href="#nav-profile" role="tab" aria-controls="nav-profile"
-                                               aria-selected="false">Travel</a>
+                                               aria-selected="false" data-i18n="whatsnew.button2">Travel</a>
                                             <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
                                                href="#nav-contact" role="tab" aria-controls="nav-contact"
-                                               aria-selected="false">Fashion</a>
+                                               aria-selected="false" data-i18n="whatsnew.button3">Fashion</a>
                                             <a class="nav-item nav-link" id="nav-last-tab" data-toggle="tab"
                                                href="#nav-last" role="tab" aria-controls="nav-contact"
-                                               aria-selected="false">Sports</a>
+                                               aria-selected="false" data-i18n="whatsnew.button4">Sports</a>
                                             <a class="nav-item nav-link" id="nav-Sports" data-toggle="tab"
                                                href="#nav-nav-Sport" role="tab" aria-controls="nav-contact"
-                                               aria-selected="false">Technology</a>
+                                               aria-selected="false" data-i18n="whatsnew.button5">Technology</a>
                                         </div>
                                     </nav>
                                     <!--End Nav Button  -->
@@ -207,10 +207,10 @@
                                                              alt="">
                                                     </div>
                                                     <div class="whates-caption">
-                                                        <h4><a href="<%= request.getContextPath() %>/latest_news">Secretart
+                                                        <h4><a href="<%= request.getContextPath() %>/latest_news" data-i18n="whates-caption.text1">Secretart
                                                             for Economic Air plane that looks like</a></h4>
-                                                        <span>by Alice cloe   -   Jun 19, 2020</span>
-                                                        <p>Struggling to sell one multi-million dollar home currently on
+                                                        <span data-i18n="whates-caption.text2">by Alice cloe   -   Jun 19, 2020</span>
+                                                        <p data-i18n="whates-caption.text3">Struggling to sell one multi-million dollar home currently on
                                                             the market won’t stop actress and singer Jennifer Lopez.</p>
                                                     </div>
                                                 </div>
@@ -226,12 +226,12 @@
                                                                      alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
-                                                                <span class="colorb">FASHION</span>
+                                                                <span class="colorb" data-i18n="fashion.title">FASHION</span>
                                                                 <h4>
-                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                    <a href="<%= request.getContextPath() %>/latest_news" data-i18n="fashion.text3">Portrait
                                                                         of group of friends ting eat. market in.</a>
                                                                 </h4>
-                                                                <p>Jun 19, 2020</p>
+                                                                <p data-i18n="time.text">Jun 19, 2020</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -242,12 +242,12 @@
                                                                      alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
-                                                                <span class="colorb">FASHION</span>
+                                                                <span class="colorb" data-i18n="fashion.title">FASHION</span>
                                                                 <h4>
-                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                    <a href="<%= request.getContextPath() %>/latest_news" data-i18n="fashion.text3">Portrait
                                                                         of group of friends ting eat. market in.</a>
                                                                 </h4>
-                                                                <p>Jun 19, 2020</p>
+                                                                 <p data-i18n="time.text">Jun 19, 2020</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -258,12 +258,12 @@
                                                                      alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
-                                                                <span class="colorg">FASHION</span>
+                                                                <span class="colorg" data-i18n="fashion.title">FASHION</span>
                                                                 <h4>
-                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                    <a href="<%= request.getContextPath() %>/latest_news" data-i18n="fashion.text3">Portrait
                                                                         of group of friends ting eat. market in.</a>
                                                                 </h4>
-                                                                <p>Jun 19, 2020</p>
+                                                                 <p data-i18n="time.text">Jun 19, 2020</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -274,12 +274,12 @@
                                                                      alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
-                                                                <span class="colorr">FASHION</span>
+                                                                <span class="colorr" data-i18n="fashion.title">FASHION</span>
                                                                 <h4>
-                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                    <a href="<%= request.getContextPath() %>/latest_news" data-i18n="fashion.text3">Portrait
                                                                         of group of friends ting eat. market in.</a>
                                                                 </h4>
-                                                                <p>Jun 19, 2020</p>
+                                                                 <p data-i18n="time.text">Jun 19, 2020</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -299,10 +299,10 @@
                                                              alt="">
                                                     </div>
                                                     <div class="whates-caption">
-                                                        <h4><a href="#">Secretart for Economic Air plane that looks
-                                                            like</a></h4>
-                                                        <span>by Alice cloe   -   Jun 19, 2020</span>
-                                                        <p>Struggling to sell one multi-million dollar home currently on
+                                                        <h4><a href="<%= request.getContextPath() %>/latest_news" data-i18n="whates-caption.text1">Secretart
+                                                            for Economic Air plane that looks like</a></h4>
+                                                        <span data-i18n="whates-caption.text2">by Alice cloe   -   Jun 19, 2020</span>
+                                                        <p data-i18n="whates-caption.text3">Struggling to sell one multi-million dollar home currently on
                                                             the market won’t stop actress and singer Jennifer Lopez.</p>
                                                     </div>
                                                 </div>
@@ -318,12 +318,12 @@
                                                                      alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
-                                                                <span class="colorb">FASHION</span>
+                                                                <span class="colorb" data-i18n="fashion.title">FASHION</span>
                                                                 <h4>
-                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                    <a href="<%= request.getContextPath() %>/latest_news" data-i18n="fashion.text3">Portrait
                                                                         of group of friends ting eat. market in.</a>
                                                                 </h4>
-                                                                <p>Jun 19, 2020</p>
+                                                                 <p data-i18n="time.text">Jun 19, 2020</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -334,12 +334,12 @@
                                                                      alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
-                                                                <span class="colorb">FASHION</span>
+                                                                <span class="colorb" data-i18n="fashion.title">FASHION</span>
                                                                 <h4>
-                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                    <a href="<%= request.getContextPath() %>/latest_news" data-i18n="fashion.text3">Portrait
                                                                         of group of friends ting eat. market in.</a>
                                                                 </h4>
-                                                                <p>Jun 19, 2020</p>
+                                                                 <p data-i18n="time.text">Jun 19, 2020</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -350,12 +350,12 @@
                                                                      alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
-                                                                <span class="colorg">FASHION</span>
+                                                                <span class="colorg" data-i18n="fashion.title">FASHION</span>
                                                                 <h4>
-                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                    <a href="<%= request.getContextPath() %>/latest_news" data-i18n="fashion.text3">Portrait
                                                                         of group of friends ting eat. market in.</a>
                                                                 </h4>
-                                                                <p>Jun 19, 2020</p>
+                                                                 <p data-i18n="time.text">Jun 19, 2020</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -366,12 +366,12 @@
                                                                      alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
-                                                                <span class="colorr">FASHION</span>
+                                                                <span class="colorr" data-i18n="fashion.title">FASHION</span>
                                                                 <h4>
-                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                    <a href="<%= request.getContextPath() %>/latest_news" data-i18n="fashion.text3">Portrait
                                                                         of group of friends ting eat. market in.</a>
                                                                 </h4>
-                                                                <p>Jun 19, 2020</p>
+                                                                 <p data-i18n="time.text">Jun 19, 2020</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -391,10 +391,10 @@
                                                              alt="">
                                                     </div>
                                                     <div class="whates-caption">
-                                                        <h4><a href="#">Secretart for Economic Air plane that looks
-                                                            like</a></h4>
-                                                        <span>by Alice cloe   -   Jun 19, 2020</span>
-                                                        <p>Struggling to sell one multi-million dollar home currently on
+                                                        <h4><a href="<%= request.getContextPath() %>/latest_news" data-i18n="whates-caption.text1">Secretart
+                                                            for Economic Air plane that looks like</a></h4>
+                                                        <span data-i18n="whates-caption.text2">by Alice cloe   -   Jun 19, 2020</span>
+                                                        <p data-i18n="whates-caption.text3">Struggling to sell one multi-million dollar home currently on
                                                             the market won’t stop actress and singer Jennifer Lopez.</p>
                                                     </div>
                                                 </div>
@@ -410,12 +410,12 @@
                                                                      alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
-                                                                <span class="colorb">FASHION</span>
+                                                                <span class="colorb" data-i18n="fashion.title">FASHION</span>
                                                                 <h4>
-                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                    <a href="<%= request.getContextPath() %>/latest_news" data-i18n="fashion.text3">Portrait
                                                                         of group of friends ting eat. market in.</a>
                                                                 </h4>
-                                                                <p>Jun 19, 2020</p>
+                                                                 <p data-i18n="time.text">Jun 19, 2020</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -426,12 +426,12 @@
                                                                      alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
-                                                                <span class="colorb">FASHION</span>
+                                                                <span class="colorb" data-i18n="fashion.title">FASHION</span>
                                                                 <h4>
-                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                    <a href="<%= request.getContextPath() %>/latest_news" data-i18n="fashion.text3">Portrait
                                                                         of group of friends ting eat. market in.</a>
                                                                 </h4>
-                                                                <p>Jun 19, 2020</p>
+                                                                 <p data-i18n="time.text">Jun 19, 2020</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -442,12 +442,12 @@
                                                                      alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
-                                                                <span class="colorg">FASHION</span>
+                                                                <span class="colorg" data-i18n="fashion.title">FASHION</span>
                                                                 <h4>
-                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                    <a href="<%= request.getContextPath() %>/latest_news" data-i18n="fashion.text3">Portrait
                                                                         of group of friends ting eat. market in.</a>
                                                                 </h4>
-                                                                <p>Jun 19, 2020</p>
+                                                                 <p data-i18n="time.text">Jun 19, 2020</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -458,12 +458,12 @@
                                                                      alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
-                                                                <span class="colorr">FASHION</span>
+                                                                <span class="colorr" data-i18n="fashion.title">FASHION</span>
                                                                 <h4>
-                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                    <a href="<%= request.getContextPath() %>/latest_news" data-i18n="fashion.text3">Portrait
                                                                         of group of friends ting eat. market in.</a>
                                                                 </h4>
-                                                                <p>Jun 19, 2020</p>
+                                                                 <p data-i18n="time.text">Jun 19, 2020</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -483,10 +483,10 @@
                                                              alt="">
                                                     </div>
                                                     <div class="whates-caption">
-                                                        <h4><a href="#">Secretart for Economic Air plane that looks
-                                                            like</a></h4>
-                                                        <span>by Alice cloe   -   Jun 19, 2020</span>
-                                                        <p>Struggling to sell one multi-million dollar home currently on
+                                                        <h4><a href="<%= request.getContextPath() %>/latest_news" data-i18n="whates-caption.text1">Secretart
+                                                            for Economic Air plane that looks like</a></h4>
+                                                        <span data-i18n="whates-caption.text2">by Alice cloe   -   Jun 19, 2020</span>
+                                                        <p data-i18n="whates-caption.text3">Struggling to sell one multi-million dollar home currently on
                                                             the market won’t stop actress and singer Jennifer Lopez.</p>
                                                     </div>
                                                 </div>
@@ -502,12 +502,12 @@
                                                                      alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
-                                                                <span class="colorb">FASHION</span>
+                                                                <span class="colorb" data-i18n="fashion.title">FASHION</span>
                                                                 <h4>
-                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                    <a href="<%= request.getContextPath() %>/latest_news" data-i18n="fashion.text3">Portrait
                                                                         of group of friends ting eat. market in.</a>
                                                                 </h4>
-                                                                <p>Jun 19, 2020</p>
+                                                                 <p data-i18n="time.text">Jun 19, 2020</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -518,12 +518,12 @@
                                                                      alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
-                                                                <span class="colorb">FASHION</span>
+                                                                <span class="colorb" data-i18n="fashion.title">FASHION</span>
                                                                 <h4>
-                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                    <a href="<%= request.getContextPath() %>/latest_news" data-i18n="fashion.text3">Portrait
                                                                         of group of friends ting eat. market in.</a>
                                                                 </h4>
-                                                                <p>Jun 19, 2020</p>
+                                                                 <p data-i18n="time.text">Jun 19, 2020</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -534,12 +534,12 @@
                                                                      alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
-                                                                <span class="colorg">FASHION</span>
+                                                                <span class="colorg" data-i18n="fashion.title">FASHION</span>
                                                                 <h4>
-                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                    <a href="<%= request.getContextPath() %>/latest_news" data-i18n="fashion.text3">Portrait
                                                                         of group of friends ting eat. market in.</a>
                                                                 </h4>
-                                                                <p>Jun 19, 2020</p>
+                                                                 <p data-i18n="time.text">Jun 19, 2020</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -550,12 +550,12 @@
                                                                      alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
-                                                                <span class="colorr">FASHION</span>
+                                                                <span class="colorr" data-i18n="fashion.title">FASHION</span>
                                                                 <h4>
-                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                    <a href="<%= request.getContextPath() %>/latest_news" data-i18n="fashion.text3">Portrait
                                                                         of group of friends ting eat. market in.</a>
                                                                 </h4>
-                                                                <p>Jun 19, 2020</p>
+                                                                 <p data-i18n="time.text">Jun 19, 2020</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -575,10 +575,10 @@
                                                              alt="">
                                                     </div>
                                                     <div class="whates-caption">
-                                                        <h4><a href="#">Secretart for Economic Air plane that looks
-                                                            like</a></h4>
-                                                        <span>by Alice cloe   -   Jun 19, 2020</span>
-                                                        <p>Struggling to sell one multi-million dollar home currently on
+                                                        <h4><a href="<%= request.getContextPath() %>/latest_news" data-i18n="whates-caption.text1">Secretart
+                                                            for Economic Air plane that looks like</a></h4>
+                                                        <span data-i18n="whates-caption.text2">by Alice cloe   -   Jun 19, 2020</span>
+                                                        <p data-i18n="whates-caption.text3">Struggling to sell one multi-million dollar home currently on
                                                             the market won’t stop actress and singer Jennifer Lopez.</p>
                                                     </div>
                                                 </div>
@@ -594,12 +594,12 @@
                                                                      alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
-                                                                <span class="colorb">FASHION</span>
+                                                                <span class="colorb" data-i18n="fashion.title">FASHION</span>
                                                                 <h4>
-                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                    <a href="<%= request.getContextPath() %>/latest_news" data-i18n="fashion.text3">Portrait
                                                                         of group of friends ting eat. market in.</a>
                                                                 </h4>
-                                                                <p>Jun 19, 2020</p>
+                                                                 <p data-i18n="time.text">Jun 19, 2020</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -610,12 +610,12 @@
                                                                      alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
-                                                                <span class="colorb">FASHION</span>
+                                                                <span class="colorb" data-i18n="fashion.title">FASHION</span>
                                                                 <h4>
-                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                    <a href="<%= request.getContextPath() %>/latest_news" data-i18n="fashion.text3">Portrait
                                                                         of group of friends ting eat. market in.</a>
                                                                 </h4>
-                                                                <p>Jun 19, 2020</p>
+                                                                 <p data-i18n="time.text">Jun 19, 2020</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -626,12 +626,12 @@
                                                                      alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
-                                                                <span class="colorg">FASHION</span>
+                                                                <span class="colorg" data-i18n="fashion.title">FASHION</span>
                                                                 <h4>
-                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                    <a href="<%= request.getContextPath() %>/latest_news" data-i18n="fashion.text3">Portrait
                                                                         of group of friends ting eat. market in.</a>
                                                                 </h4>
-                                                                <p>Jun 19, 2020</p>
+                                                                 <p data-i18n="time.text">Jun 19, 2020</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -642,12 +642,12 @@
                                                                      alt="">
                                                             </div>
                                                             <div class="whats-right-cap">
-                                                                <span class="colorr">FASHION</span>
+                                                                <span class="colorr" data-i18n="fashion.title">FASHION</span>
                                                                 <h4>
-                                                                    <a href="<%= request.getContextPath() %>/latest_news">Portrait
+                                                                    <a href="<%= request.getContextPath() %>/latest_news" data-i18n="fashion.text3">Portrait
                                                                         of group of friends ting eat. market in.</a>
                                                                 </h4>
-                                                                <p>Jun 19, 2020</p>
+                                                                 <p data-i18n="time.text">Jun 19, 2020</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -687,7 +687,7 @@
                     <div class="most-recent-area">
                         <!-- Section Tittle -->
                         <div class="small-tittle mb-20">
-                            <h4>Most Recent</h4>
+                            <h4 data-i18n="most-recent.title">Most Recent</h4>
                         </div>
                         <!-- Details -->
                         <div class="most-recent mb-40">
@@ -696,10 +696,10 @@
                                 <img src="<%= request.getContextPath() %>/../../assets/img/gallery/most_recent.png"
                                      alt="">
                                 <div class="most-recent-cap">
-                                    <span class="bgbeg">Vogue</span>
-                                    <h4><a href="<%= request.getContextPath() %>/latest_news">What to Wear: 9+ Cute Work
+                                    <span class="bgbeg" data-i18n="vogue.title">Vogue</span>
+                                    <h4><a href="<%= request.getContextPath() %>/latest_news" data-i18n="most-recent.text1">What to Wear: 9+ Cute Work
                                         <br> Outfits to Wear This.</a></h4>
-                                    <p>Jhon | 2 hours ago</p>
+                                    <p data-i18n="most-recent.text2">Jhon | 2 hours ago</p>
                                 </div>
                             </div>
                         </div>
@@ -711,9 +711,9 @@
                                      alt="">
                             </div>
                             <div class="most-recent-capt">
-                                <h4><a href="<%= request.getContextPath() %>/latest_news">Scarlett’s disappointment at
+                                <h4><a href="<%= request.getContextPath() %>/latest_news" data-i18n="most-recent.text3">Scarlett’s disappointment at
                                     latest accolade</a></h4>
-                                <p>Jhon | 2 hours ago</p>
+                                <p data-i18n="most-recent.text2">Jhon | 2 hours ago</p>
                             </div>
                         </div>
                         <!-- Single -->
@@ -724,9 +724,9 @@
                                      alt="">
                             </div>
                             <div class="most-recent-capt">
-                                <h4><a href="<%= request.getContextPath() %>/latest_news">Most Beautiful Things to Do in
+                                <h4><a href="<%= request.getContextPath() %>/latest_news" data-i18n="most-recent.text4">Most Beautiful Things to Do in
                                     Sidney with Your BF</a></h4>
-                                <p>Jhon | 3 hours ago</p>
+                                <p data-i18n="most-recent.text5">Jhon | 3 hours ago</p>
                             </div>
                         </div>
                     </div>
@@ -753,7 +753,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="small-tittle mb-30">
-                                        <h4>Most Popular</h4>
+                                        <h4 data-i18n="most-popular.title">Most Popular</h4>
                                     </div>
                                 </div>
                             </div>
@@ -768,8 +768,9 @@
                                                      alt="">
                                             </div>
                                             <div class="weekly2-caption">
-                                                <h4><a href="#">Scarlett’s disappointment at latest accolade</a></h4>
-                                                <p>Jhon | 2 hours ago</p>
+                                                <h4><a href="<%= request.getContextPath() %>/latest_news" data-i18n="most-recent.text3">Scarlett’s disappointment at
+                                                    latest accolade</a></h4>
+                                                <p data-i18n="most-recent.title">Jhon | 2 hours ago</p>
                                             </div>
                                         </div>
                                         <!-- Single -->
@@ -779,8 +780,9 @@
                                                      alt="">
                                             </div>
                                             <div class="weekly2-caption">
-                                                <h4><a href="#">Scarlett’s disappointment at latest accolade</a></h4>
-                                                <p>Jhon | 2 hours ago</p>
+                                                <h4><a href="<%= request.getContextPath() %>/latest_news" data-i18n="most-recent.text3">Scarlett’s disappointment at
+                                                    latest accolade</a></h4>
+                                                <p data-i18n="most-recent.title">Jhon | 2 hours ago</p>
                                             </div>
                                         </div>
                                         <!-- Single -->
@@ -790,8 +792,9 @@
                                                      alt="">
                                             </div>
                                             <div class="weekly2-caption">
-                                                <h4><a href="#">Scarlett’s disappointment at latest accolade</a></h4>
-                                                <p>Jhon | 2 hours ago</p>
+                                                <h4><a href="<%= request.getContextPath() %>/latest_news" data-i18n="most-recent.text3">Scarlett’s disappointment at
+                                                    latest accolade</a></h4>
+                                                <p data-i18n="most-recent.title">Jhon | 2 hours ago</p>
                                             </div>
                                         </div>
                                         <!-- Single -->
@@ -801,8 +804,9 @@
                                                      alt="">
                                             </div>
                                             <div class="weekly2-caption">
-                                                <h4><a href="#">Scarlett’s disappointment at latest accolade</a></h4>
-                                                <p>Jhon | 2 hours ago</p>
+                                                <h4><a href="<%= request.getContextPath() %>/latest_news" data-i18n="most-recent.text3">Scarlett’s disappointment at
+                                                    latest accolade</a></h4>
+                                                <p data-i18n="most-recent.title">Jhon | 2 hours ago</p>
                                             </div>
                                         </div>
                                     </div>
@@ -825,7 +829,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-tittle mb-30">
-                            <h3>Trending News</h3>
+                            <h3 data-i18n="trendingnews.title">Trending News</h3>
                         </div>
                     </div>
                 </div>
@@ -839,8 +843,8 @@
                                     <img src="<%= request.getContextPath() %>/assets/img/gallery/tranding1.png" alt="">
                                 </div>
                                 <div class="what-cap">
-                                    <h4><a href="latest_news">What to Expect From the 2020 Oscar Nominations</a></h4>
-                                    <p>Jun 19, 2020</p>
+                                    <h4><a href="latest_news" data-i18n="latest_news.text1">What to Expect From the 2020 Oscar Nominations</a></h4>
+                                     <p data-i18n="time.text">Jun 19, 2020</p>
                                     <a class="popup-video btn-icon"
                                        href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span
                                             class="flaticon-play-button"></span></a>
@@ -853,8 +857,8 @@
                                     <img src="<%= request.getContextPath() %>/assets/img/gallery/tranding2.png" alt="">
                                 </div>
                                 <div class="what-cap">
-                                    <h4><a href="latest_news">What to Expect From the 2020 Oscar Nominations</a></h4>
-                                    <p>Jun 19, 2020</p>
+                                    <h4><a href="latest_news" data-i18n="latest_news.text1">What to Expect From the 2020 Oscar Nominations</a></h4>
+                                     <p data-i18n="time.text">Jun 19, 2020</p>
                                     <a class="popup-video" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span
                                             class="flaticon-play-button"></span></a>
                                 </div>
@@ -866,8 +870,8 @@
                                     <img src="<%= request.getContextPath() %>/assets/img/gallery/tranding1.png" alt="">
                                 </div>
                                 <div class="what-cap">
-                                    <h4><a href="latest_news">What to Expect From the 2020 Oscar Nominations</a></h4>
-                                    <p>Jun 19, 2020</p>
+                                    <h4><a href="latest_news" data-i18n="latest_news.text1">What to Expect From the 2020 Oscar Nominations</a></h4>
+                                     <p data-i18n="time.text">Jun 19, 2020</p>
                                     <a class="popup-video" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span
                                             class="flaticon-play-button"></span></a>
                                 </div>
@@ -879,8 +883,8 @@
                                     <img src="<%= request.getContextPath() %>/assets/img/gallery/tranding2.png" alt="">
                                 </div>
                                 <div class="what-cap">
-                                    <h4><a href="latest_news">What to Expect From the 2020 Oscar Nominations</a></h4>
-                                    <p>Jun 19, 2020</p>
+                                    <h4><a href="latest_news" data-i18n="latest_news.text1">What to Expect From the 2020 Oscar Nominations</a></h4>
+                                     <p data-i18n="time.text">Jun 19, 2020</p>
                                     <a class="popup-video" href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span
                                             class="flaticon-play-button"></span></a>
                                 </div>
@@ -903,7 +907,7 @@
                         <div class="video-items text-center">
                             <video controls>
                                 <source src="<%= request.getContextPath() %>/../../assets/video/news2.mp4"
-                                        type="video/mp4">
+                                        type="video/mp4" data-i18n="video.text1">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -911,7 +915,7 @@
                         <div class="video-items text-center">
                             <video controls>
                                 <source src="<%= request.getContextPath() %>/../../assets/video/news1.mp4"
-                                        type="video/mp4">
+                                        type="video/mp4" data-i18n="video.text1">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -919,7 +923,7 @@
                         <div class="video-items text-center">
                             <video controls>
                                 <source src="<%= request.getContextPath() %>/../../assets/video/news3.mp4"
-                                        type="video/mp4">
+                                        type="video/mp4" data-i18n="video.text1">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -927,7 +931,7 @@
                         <div class="video-items text-center">
                             <video controls>
                                 <source src="<%= request.getContextPath() %>/../../assets/video/news1.mp4"
-                                        type="video/mp4">
+                                        type="video/mp4" data-i18n="video.text1">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -935,7 +939,7 @@
                         <div class="video-items text-center">
                             <video controls>
                                 <source src="<%= request.getContextPath() %>/../../assets/video/news3.mp4"
-                                        type="video/mp4">
+                                        type="video/mp4" data-i18n="video.text1">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -950,55 +954,55 @@
                             <div class="single-video">
                                 <video controls>
                                     <source src="<%= request.getContextPath() %>/../../assets/video/news2.mp4"
-                                            type="video/mp4">
+                                            type="video/mp4" data-i18n="video.text1">
                                     Your browser does not support the video tag.
                                 </video>
                                 <div class="video-intro">
-                                    <h4>Old Spondon News - 2020 </h4>
+                                    <h4 data-i18n="video.text2">Old Spondon News - 2020 </h4>
                                 </div>
                             </div>
                             <!-- Single video -->
                             <div class="single-video">
                                 <video controls>
                                     <source src="<%= request.getContextPath() %>/../../assets/video/news1.mp4"
-                                            type="video/mp4">
+                                            type="video/mp4" data-i18n="video.text1">
                                     Your browser does not support the video tag.
                                 </video>
                                 <div class="video-intro">
-                                    <h4>Banglades News Video </h4>
-                                </div>
-                            </div>
-                            <!-- Single video -->
-                            <div class="single-video">
-                                <video controls>
-                                    <source src="<%= request.getContextPath() %>/../../assets/video/news3.mp4"
-                                            type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div class="video-intro">
-                                    <h4>Latest Video - 2020 </h4>
+                                    <h4 data-i18n="video.text3">Banglades News Video </h4>
                                 </div>
                             </div>
                             <!-- Single video -->
                             <div class="single-video">
                                 <video controls>
                                     <source src="<%= request.getContextPath() %>/../../assets/video/news1.mp4"
-                                            type="video/mp4">
+                                            type="video/mp4" data-i18n="video.text1">
                                     Your browser does not support the video tag.
                                 </video>
                                 <div class="video-intro">
-                                    <h4>Spondon News -2019 </h4>
+                                    <h4 data-i18n="video.text4">Latest Video - 2020</h4>
                                 </div>
                             </div>
                             <!-- Single video -->
                             <div class="single-video">
                                 <video controls>
-                                    <source src="<%= request.getContextPath() %>/../../assets/video/news3.mp4"
-                                            type="video/mp4">
+                                    <source src="<%= request.getContextPath() %>/../../assets/video/news1.mp4"
+                                            type="video/mp4" data-i18n="video.text1">
                                     Your browser does not support the video tag.
                                 </video>
                                 <div class="video-intro">
-                                    <h4>Latest Video - 2020</h4>
+                                    <h4 data-i18n="video.text2">Old Spondon News - 2020 </h4>
+                                </div>
+                            </div>
+                            <!-- Single video -->
+                            <div class="single-video">
+                                <video controls>
+                                    <source src="<%= request.getContextPath() %>/../../assets/video/news1.mp4"
+                                            type="video/mp4" data-i18n="video.text1">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-intro">
+                                    <h4 data-i18n="video.text4">Latest Video - 2020</h4>
                                 </div>
                             </div>
                         </div>
@@ -1027,9 +1031,9 @@
                                                      alt="">
                                             </div>
                                             <div class="weekly3-caption">
-                                                <h4><a href="latest_news">What to Expect From the 2020 Oscar
+                                                <h4><a href="latest_news" data-i18n="latest_news.text2">What to Expect From the 2020 Oscar
                                                     Nominations</a></h4>
-                                                <p>19 Jan 2020</p>
+                                                <p data-i18n="time.text2">19 Jan 2020</p>
                                             </div>
                                         </div>
                                         <!-- Add dynamic data here from controller if needed -->
@@ -1039,9 +1043,9 @@
                                                      alt="">
                                             </div>
                                             <div class="weekly3-caption">
-                                                <h4><a href="latest_news">What to Expect From the 2020 Oscar
+                                                <h4><a href="latest_news" data-i18n="latest_news.text2">What to Expect From the 2020 Oscar
                                                     Nominations</a></h4>
-                                                <p>19 Jan 2020</p>
+                                                <p data-i18n="time.text2">19 Jan 2020</p>
                                             </div>
                                         </div>
                                         <!-- Add dynamic data here from controller if needed -->
@@ -1051,9 +1055,9 @@
                                                      alt="">
                                             </div>
                                             <div class="weekly3-caption">
-                                                <h4><a href="latest_news">What to Expect From the 2020 Oscar
+                                                <h4><a href="latest_news" data-i18n="latest_news.text2">What to Expect From the 2020 Oscar
                                                     Nominations</a></h4>
-                                                <p>19 Jan 2020</p>
+                                                <p data-i18n="time.text2">19 Jan 2020</p>
                                             </div>
                                         </div>
                                         <!-- Add dynamic data here from controller if needed -->
@@ -1063,9 +1067,9 @@
                                                      alt="">
                                             </div>
                                             <div class="weekly3-caption">
-                                                <h4><a href="latest_news">What to Expect From the 2020 Oscar
+                                                <h4><a href="latest_news" data-i18n="latest_news.text2">What to Expect From the 2020 Oscar
                                                     Nominations</a></h4>
-                                                <p>19 Jan 2020</p>
+                                                <p data-i18n="time.text2">19 Jan 2020</p>
                                             </div>
                                         </div>
                                         <!-- Add dynamic data here from controller if needed -->
@@ -1075,9 +1079,9 @@
                                                      alt="">
                                             </div>
                                             <div class="weekly3-caption">
-                                                <h4><a href="latest_news">What to Expect From the 2020 Oscar
+                                                <h4><a href="latest_news" data-i18n="latest_news.text2">What to Expect From the 2020 Oscar
                                                     Nominations</a></h4>
-                                                <p>19 Jan 2020</p>
+                                                <p data-i18n="time.text2">19 Jan 2020</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1152,6 +1156,33 @@
 <!-- Jquery Plugins, main Jquery -->
 <script src="../../assets/js/plugins.js"></script>
 <script src="../../assets/js/main.js"></script>
+<script>
+    var currentLang = 'en';
+
+    function loadMessages(lang) {
+        $.getJSON('../../assets/lang/messages_' + lang + '.json', function(data) {
+            $('[data-i18n]').each(function() {
+                var key = $(this).data('i18n');
+                $(this).text(data[key]);
+            });
+
+            $('[data-i18n-placeholder]').each(function() {
+                var key = $(this).data('i18n-placeholder');
+                $(this).attr('placeholder', data[key]);
+            });
+        });
+    }
+
+    $(document).ready(function() {
+        loadMessages(currentLang);
+
+        $('#change-lang a').click(function(e) {
+            e.preventDefault();
+            currentLang = $(this).data('lang');
+            loadMessages(currentLang);
+        });
+    });
+</script>
 
 </body>
 </html>
