@@ -20,20 +20,20 @@
                 <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
             </div>
             <span>or use your account</span>
-            <input type="email" placeholder="Email"/>
-            <input type="password" placeholder="Password"/>
+            <input type="text" id="username" placeholder="Username"/>
+            <input type="password" id="password" placeholder="Password"/>
             <div id="passwordError" class="error-message"></div>
             <style>
                 .error-message {
-                    color: red; /* Đặt màu chữ cho thông báo lỗi */
-                    background-color: rgba(255, 0, 0, 0.1); /* Đặt màu nền cho thông báo lỗi */
-                    padding: 5px; /* Tăng độ rộng và độ cao của phần tử chứa thông báo lỗi */
-                    margin-top: 5px; /* Tăng khoảng cách giữa ô nhập liệu và thông báo lỗi */
-                    border-radius: 3px; /* Làm tròn các góc của phần tử chứa thông báo lỗi */
+                    color: red;
+                    background-color: rgba(255, 0, 0, 0.1);
+                    padding: 5px;
+                    margin-top: 5px;
+                    border-radius: 3px;
                 }
             </style>
             <a href="#">Forgot your password?</a>
-            <button id="loginButton">Sign In</button>
+            <button type="button" id="loginButton">Sign In</button>
         </form>
     </div>
     <div class="overlay-container">
@@ -69,54 +69,42 @@
     const loginButton = document.getElementById('loginButton');
 
     loginButton.addEventListener('click', () => {
-        // Lấy giá trị email và password từ các input
-        const emailInput = document.querySelector('input[type="email"]');
-        const passwordInput = document.querySelector('input[type="password"]');
-        const email = emailInput.value;
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+        const username = usernameInput.value;
         const password = passwordInput.value;
-        const passwordError = document.getElementById('passwordError'); // Lấy phần tử chứa thông báo lỗi
+        const passwordError = document.getElementById('passwordError');
 
-        // Biểu thức chính quy để kiểm tra định dạng email
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        // Kiểm tra xem email và password có được nhập vào không
-        if (!email || !password) {
-            passwordError.innerText = 'Vui lòng điền đầy đủ thông tin.'; // Hiển thị thông báo lỗi
+        if (!username || !password) {
+            passwordError.innerText = 'Please complete all information.';
             return;
         }
 
-        // Kiểm tra định dạng email
-        if (!emailRegex.test(email)) {
-            passwordError.innerText = 'Địa chỉ email không hợp lệ.'; // Hiển thị thông báo lỗi
-            return;
-        }
-
-        // Kiểm tra xem password có ít nhất 8 kí tự không
         if (password.length < 8) {
-            passwordError.innerText = 'Mật khẩu phải có ít nhất 8 kí tự.'; // Hiển thị thông báo lỗi
+            passwordError.innerText = 'Password must have at least 8 characters.';
             return;
         }
 
-        // Xóa thông báo lỗi nếu không có lỗi
         passwordError.innerText = '';
 
-        // Thực hiện AJAX request
         $.ajax({
-            url: '/login', // Địa chỉ của endpoint xử lý đăng nhập
-            method: 'POST', // Hoặc 'GET' tùy thuộc vào cách bạn đã thiết lập máy chủ
-            data: { email: email, password: password }, // Dữ liệu gửi đi
+            url: '/checklogin',
+            method: 'POST',
+            data: { username: username, password: password },
             success: function(response) {
-                // Xử lý kết quả thành công
-                console.log('Login successful');
-                // Redirect hoặc thực hiện các hành động khác tại đây
+                if (response.success) {
+                    alert("Login success");
+                    window.location.href = '/user';
+                } else {
+                    passwordError.innerText = response.message;
+                }
             },
             error: function(xhr, status, error) {
-                // Xử lý lỗi
                 console.error('Login failed:', error);
+                passwordError.innerText = 'Login failed. Please try again.';
             }
         });
     });
-
 </script>
 <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

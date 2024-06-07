@@ -8,35 +8,50 @@
     <title>Sign Up</title>
     <link rel="stylesheet" href="../../assets/css/style2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .error-message {
+            color: red;
+            background-color: rgba(255, 0, 0, 0.1);
+            padding: 5px;
+            margin-top: 5px;
+            border-radius: 3px;
+        }
+        .scrollable {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+    </style>
 </head>
 <body>
 <div class="container right-panel-active" id="container">
     <div class="form-container sign-up-container">
-        <form action="#">
-            <h1>Create Account</h1>
-            <div class="social-container">
-                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-            <span>or use your email for registration</span>
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <input type="password" placeholder="Confirm Password" id="confirmPassword" />
-            <div id="passwordError" class="error-message"></div>
-            <br>
-            <style>
-                .error-message {
-                    color: red; /* Đặt màu chữ cho thông báo lỗi */
-                    background-color: rgba(255, 0, 0, 0.1); /* Đặt màu nền cho thông báo lỗi */
-                    padding: 5px; /* Tăng độ rộng và độ cao của phần tử chứa thông báo lỗi */
-                    margin-top: 5px; /* Tăng khoảng cách giữa ô nhập liệu và thông báo lỗi */
-                    border-radius: 3px; /* Làm tròn các góc của phần tử chứa thông báo lỗi */
-                }
-            </style>
-            <button id="signUpButton">Sign Up</button>
-        </form>
+        <div class="scrollable">
+            <form id="signUpForm">
+                <h1>Create Account</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email for registration</span>
+                <input type="text" name="name" placeholder="Name" required />
+                <input type="text" name="address" placeholder="Address" required />
+                <input type="email" name="email" placeholder="Email" required />
+                <input type="text" name="phoneNumber" placeholder="Phone Number" required />
+                <input type="text" name="username" placeholder="Username" required />
+                <input type="password" name="password" placeholder="Password" required />
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+                <input type="date" name="dateOfBirth" placeholder="Date of Birth" required />
+                <select name="sex" required>
+                    <option value="" disabled selected>Sex</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <div id="passwordError" class="error-message"></div>
+                <br>
+                <button type="submit" id="signUpButton">Sign Up</button>
+            </form>
+        </div>
     </div>
     <div class="overlay-container">
         <div class="overlay">
@@ -54,7 +69,6 @@
     </div>
 </div>
 
-
 <script>
     const signUpButton = document.getElementById('signUp');
     const signInButton = document.getElementById('signIn');
@@ -70,58 +84,74 @@
 </script>
 
 <script>
-    const signUpForm = document.querySelector('.sign-up-container form');
+    const signUpForm = document.getElementById('signUpForm');
     const confirmPasswordInput = document.getElementById('confirmPassword');
     const passwordError = document.getElementById('passwordError');
 
     signUpForm.addEventListener('submit', (event) => {
         event.preventDefault();
 
-        const name = signUpForm.querySelector('input[type="text"]').value;
-        const email = signUpForm.querySelector('input[type="email"]').value;
-        const password = signUpForm.querySelector('input[type="password"]').value;
+        const formData = new FormData(signUpForm);
+        const name = formData.get('name');
+        const address = formData.get('address');
+        const email = formData.get('email');
+        const phoneNumber = formData.get('phoneNumber');
+        const username = formData.get('username');
+        const password = formData.get('password');
         const confirmPassword = confirmPasswordInput.value;
+        const sex = formData.get('sex');
+        const dateOfBirth = formData.get('dateOfBirth');
 
-        // Biểu thức chính quy để kiểm tra định dạng email
+        // Check if all fields are filled
+        if (!name || !address || !email || !phoneNumber || !username || !password || !confirmPassword || !sex || !dateOfBirth) {
+            passwordError.innerText = 'Please fill in all fields.';
+            return;
+        }
+
+        // Check email format
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        // Kiểm tra xem email và password có được nhập vào không
-        if (!name || !email || !password || !confirmPassword) {
-            passwordError.innerText = 'Vui lòng điền đầy đủ thông tin.';
-            return;
-        }
-
-        // Kiểm tra định dạng email
         if (!emailRegex.test(email)) {
-            passwordError.innerText = 'Địa chỉ email không hợp lệ.';
+            passwordError.innerText = 'Email address is not valid.';
             return;
         }
 
-        // Kiểm tra xem password có ít nhất 8 kí tự không
+        // Check if password is at least 8 characters
         if (password.length < 8) {
-            passwordError.innerText = 'Mật khẩu phải có ít nhất 8 kí tự.';
+            passwordError.innerText = 'Password must be at least 8 characters.';
             return;
         }
 
-        // Kiểm tra xem password và confirm password có khớp nhau không
+        // Check if password and confirm password match
         if (password !== confirmPassword) {
-            passwordError.innerText = 'Mật khẩu và xác nhận mật khẩu không khớp nhau.';
+            passwordError.innerText = 'Password and confirm password do not match.';
             return;
         }
+
         passwordError.innerText = '';
 
         $.ajax({
-            url: '/signUp', // Địa chỉ của endpoint xử lý đăng ký
-            method: 'POST', // Hoặc 'GET' tùy thuộc vào cách bạn đã thiết lập máy chủ
-            data: {name:name, email: email, password: password, confirmPassword: confirmPassword }, // Dữ liệu gửi đi
+            url: '/signUp',
+            method: 'POST',
+            data: {
+                name: name,
+                address: address,
+                email: email,
+                phoneNumber: phoneNumber,
+                username: username,
+                password: password,
+                sex: sex,
+                dateOfBirth: dateOfBirth
+            },
             success: function(response) {
-                // Xử lý kết quả thành công
-                console.log('Sign up successful');
-                // Redirect hoặc thực hiện các hành động khác tại đây
+                if (response.success) {
+                    window.location.href = '/login';
+                } else {
+                    passwordError.innerText = response.message;
+                }
             },
             error: function(xhr, status, error) {
-                // Xử lý lỗi
                 console.error('Sign up failed:', error);
+                passwordError.innerText = 'Sign up failed. Please try again.';
             }
         });
     });
