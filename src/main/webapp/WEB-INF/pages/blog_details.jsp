@@ -1,4 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
@@ -23,12 +25,6 @@
    <link rel="stylesheet" href="../../assets/css/slick.css">
    <link rel="stylesheet" href="../../assets/css/nice-select.css">
    <link rel="stylesheet" href="../../assets/css/style.css">
-   <link rel="stylesheet" href="../../assets/css/contact.css">
-   <style>
-      .error-message {
-         color: red;
-      }
-   </style>
 </head>
 
 <body>
@@ -54,15 +50,14 @@
             <div class="col-lg-8 posts-list">
                <div class="single-post">
                   <div class="feature-img">
-                     <img class="img-fluid" src="<%= request.getContextPath() %>/../../assets/img/blog/single_blog_1.png" alt="">
+                     <img class="img-fluid" src="<%= request.getContextPath() %>${news.image}" alt="">
                   </div>
                   <div class="blog_details">
-                     <h2>Second divided from form fish beast made every of seas
-                        all gathered us saying he our
+                     <h2>${news.title}
                      </h2>
                      <ul class="blog-info-link mt-3 mb-4">
                         <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                        <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                        <li><a href="#"><i class="fa fa-comments"></i> ${fn:length(comments)} Comments</a></li>
                      </ul>
                      <p class="excert">
                         MCSE boot camps have its supporters and its detractors. Some people do not understand why you
@@ -165,6 +160,7 @@
 
                <div class="comments-area">
                   <h4>05 Comments</h4>
+                  <c:forEach var="comments" items="${comments}">
                   <div class="comment-list">
                      <div class="single-comment justify-content-between d-flex">
                         <div class="user justify-content-between d-flex">
@@ -172,11 +168,11 @@
                               <img src="<%= request.getContextPath() %>/../../assets/img/comment/comment_1.png" alt="">
                            </div>
                            <div class="desc">
-                              <p class="comment">Multiply sea night grass fourth day sea lesser rule open subdue female fill which them Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser</p>
+                              <p class="comment">${comments.content}</p>
                               <div class="d-flex justify-content-between">
                                  <div class="d-flex align-items-center">
                                     <h5><a href="#">Emilly Blunt</a></h5>
-                                    <p class="date">December 4, 2017 at 3:12 pm </p>
+                                    <p class="date">${comments.createDate} </p>
                                  </div>
                                  <div class="reply-btn">
                                     <a href="#" class="btn-reply text-uppercase">reply</a>
@@ -186,24 +182,27 @@
                         </div>
                      </div>
                   </div>
+                  </c:forEach>
                   <!-- Add more comment-list here -->
                </div>
 
                <div class="comment-form">
                   <h4>Leave a Reply</h4>
-                  <form class="form-contact comment_form" action="#" id="commentForm">
+                  <form class="form-contact comment_form" action="<%= request.getContextPath() %>/saveComment" method="post" id="commentForm">
                      <div class="row">
                         <div class="col-12">
                            <div class="form-group">
                               <textarea class="form-control w-100" name="comment" id="comment" cols="30" rows="9" placeholder="Write Comment"></textarea>
                            </div>
                         </div>
-                        <div class="col-sm-6">
+                        <input type="hidden" name="newsId" value="${news.idNews}">
+
+                      <!--  <div class="col-sm-6">
                            <div class="form-group">
                               <input class="form-control" name="name" id="name" type="text" placeholder="Name">
                            </div>
-                        </div>
-                        <div class="col-sm-6">
+                        </div> -->
+                       <!-- <div class="col-sm-6">
                            <div class="form-group">
                               <input class="form-control" name="email" id="email" type="email" placeholder="Email">
                            </div>
@@ -212,7 +211,7 @@
                            <div class="form-group">
                               <input class="form-control" name="website" id="website" type="text" placeholder="Website">
                            </div>
-                        </div>
+                        </div> -->
                      </div>
                      <div class="form-group">
                         <button type="submit" class="button button-contactForm btn_1 boxed-btn">Send Message</button>
@@ -412,46 +411,7 @@
 <!-- Search model end -->
 
    <!-- All JS Custom Plugins Link Here here -->
-<!-- Script for form validation -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
-<script>
-   $(document).ready(function(){
-      $('#commentForm').validate({
-         rules: {
-            comment: {
-               required: true,
-               minlength: 20
-            },
-            name: {
-               required: true
-            },
-            email: {
-               required: true,
-               email: true
-            }
-         },
-         messages: {
-            comment: {
-               required: "<span class='error-message'>Please write your comment.</span>",
-               minlength: "<span class='error-message'>Your comment must be at least 20 characters long.</span>"
-            },
-            name: {
-               required: "<span class='error-message'>Please enter your name.</span>"
-            },
-            email: {
-               required: "<span class='error-message'>Please enter your email address.</span>",
-               email: "<span class='error-message'>Please enter a valid email address.</span>"
-            }
-
-         },
-         submitHandler: function(form) {
-            // Xử lý gửi form bằng AJAX hoặc một hành động khác
-            alert('Form submitted successfully!');
-         }
-      });
-   });
-</script>
+   
    <script src="../../assets/js/vendor/modernizr-3.5.0.min.js"></script>
    <!-- Jquery, Popper, Bootstrap -->
    <script src="../../assets/js/vendor/jquery-1.12.4.min.js"></script>
