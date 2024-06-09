@@ -9,12 +9,15 @@ import fit.hcmuaf.news.service.CommentService;
 import fit.hcmuaf.news.service.NewsService;
 import fit.hcmuaf.news.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import javax.servlet.ServletContext;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @Controller
 public class MainController {
@@ -138,17 +141,32 @@ public class MainController {
         List<News> latestNews = newsService.findByNewsgroupIdNewsgroup(1L); // Thay 1L bằng ID tương ứng
         return ResponseEntity.ok(latestNews);
     }
-    @RequestMapping("/api/contact")
-    public String handleContactFormSubmission(@RequestBody ContactForm contactForm) {
+    @PostMapping("/api/contact")
+    @ResponseBody
+    public ResponseEntity<String> handleContactFormSubmission(@RequestBody ContactForm contactForm) {
+        // Kiểm tra các trường dữ liệu
+        if (contactForm.getName() == null || contactForm.getName().trim().isEmpty() ||
+                contactForm.getEmail() == null || contactForm.getEmail().trim().isEmpty() ||
+                contactForm.getSubject() == null || contactForm.getSubject().trim().isEmpty() ||
+                contactForm.getMessage() == null || contactForm.getMessage().trim().isEmpty()) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("All fields are required");
+        }
+
+        // Kiểm tra định dạng email
+        String emailRegex = "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$";
+        Pattern pattern = Pattern.compile(emailRegex);
+        Matcher matcher = pattern.matcher(contactForm.getEmail());
+        if (!matcher.matches()) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid email format");
+        }
+
         try {
             contactFormRepository.save(contactForm);
             System.out.println("Contact form saved to database.");
+            return ResponseEntity.ok("Success");
         } catch (Exception ex) {
-            // Xử lý khi lưu dữ liệu thất bại
             System.err.println("Failed to save contact form to database: " + ex.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to save contact form");
         }
-
-        System.out.println("Received contact form submission: " + contactForm);
-        return "success"; // hoặc bất kỳ thông báo nào khác bạn muốn trả về
     }
 }
