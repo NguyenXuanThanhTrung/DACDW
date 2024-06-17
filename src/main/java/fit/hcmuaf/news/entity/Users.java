@@ -21,6 +21,7 @@ public class Users {
     private String sex;
     private LocalDateTime updatedate;
     private LocalDateTime dateofbirth;
+    private String role; // Thêm thuộc tính role
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Comment> comments = new ArrayList<>();
@@ -28,7 +29,7 @@ public class Users {
     // Constructors
     public Users() {}
 
-    public Users(String name, String address, String email, String phonenumber, String username, String password, String sex, LocalDateTime updatedate, LocalDateTime dateofbirth) {
+    public Users(String name, String address, String email, String phonenumber, String username, String password, String sex, LocalDateTime updatedate, LocalDateTime dateofbirth, String role) {
         this.name = name;
         this.address = address;
         this.email = email;
@@ -38,6 +39,7 @@ public class Users {
         this.sex = sex;
         this.updatedate = updatedate;
         this.dateofbirth = dateofbirth;
+        this.role = role; // Khởi tạo thuộc tính role
     }
 
     // Getters and setters
@@ -119,6 +121,14 @@ public class Users {
 
     public void setDateofbirth(LocalDateTime dateofbirth) {
         this.dateofbirth = dateofbirth;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public List<Comment> getComments() {
