@@ -16,5 +16,8 @@ public interface NewsService {
     Optional<News> findById(Long id);
     News save(News news);
     void deleteById(Long id);
+    List<News> searchNews(String query);
+
+    List<News> getNewsWithPagination(int offset, int limit);
 }
 

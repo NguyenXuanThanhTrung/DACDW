@@ -20,10 +20,9 @@ public class NewsgroupServiceImpl implements NewsgroupService {
     }
 
     @Override
-    public Optional<Newsgroup> findById(Long id) {
-        return newsgroupRepository.findById(id);
+    public Newsgroup findById(Long id) {
+        return newsgroupRepository.findById(id).orElse(null);
     }
-
     @Override
     public Newsgroup save(Newsgroup newsgroup) {
         return newsgroupRepository.save(newsgroup);

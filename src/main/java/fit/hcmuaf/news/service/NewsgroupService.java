@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Optional;
 public interface NewsgroupService {
     List<Newsgroup> findAll();
-    Optional<Newsgroup> findById(Long id);
+    Newsgroup findById(Long id);
     Newsgroup save(Newsgroup newsgroup);
     void deleteById(Long id);
 }

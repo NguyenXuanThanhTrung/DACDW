@@ -11,7 +11,6 @@ public class News {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idNews;
-
     private String title;
     private String image;
     private String newsquote;
@@ -35,7 +34,8 @@ public class News {
     private List<Comment> comments = new ArrayList<>();
 
     // Constructors
-    public News() {}
+    public News() {
+    }
 
     public News(String title, String image, String newsquote, String content, int numberofreads, LocalDateTime createDay, Category category, Newsgroup newsgroup, Users user) {
         this.title = title;
@@ -138,5 +138,3 @@ public class News {
         this.comments = comments;
     }
 }
-
-
