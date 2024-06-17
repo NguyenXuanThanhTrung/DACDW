@@ -8,6 +8,7 @@
     <title>Sign In</title>
     <link rel="stylesheet" href="../../assets/css/style2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 <body>
 <div class="container" id="container">
@@ -30,6 +31,7 @@
                     padding: 5px;
                     margin-top: 5px;
                     border-radius: 3px;
+                    display: none;
                 }
             </style>
             <a href="#">Forgot your password?</a>
@@ -93,8 +95,20 @@
             data: { username: username, password: password },
             success: function(response) {
                 if (response.success) {
-                    alert("Login success");
-                    window.location.href = '/user';
+                    Swal.fire({
+                        title: 'Login Success!',
+                        text: 'You have successfully logged in.',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            if (response.role === 'ADMIN') {
+                                window.location.href = '/admin';
+                            } else {
+                                window.location.href = '/user';
+                            }
+                        }
+                    });
                 } else {
                     passwordError.innerText = response.message;
                 }
@@ -106,7 +120,9 @@
         });
     });
 </script>
+
 <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
