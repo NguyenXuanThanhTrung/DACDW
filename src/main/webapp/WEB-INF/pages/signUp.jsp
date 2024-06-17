@@ -8,6 +8,7 @@
     <title>Sign Up</title>
     <link rel="stylesheet" href="../../assets/css/style2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <style>
         .error-message {
             color: red;
@@ -15,6 +16,7 @@
             padding: 5px;
             margin-top: 5px;
             border-radius: 3px;
+            display: none;
         }
         .scrollable {
             max-height: 400px;
@@ -144,7 +146,16 @@
             },
             success: function(response) {
                 if (response.success) {
-                    window.location.href = '/login';
+                    Swal.fire({
+                        title: 'Sign Up Success!',
+                        text: 'You have successfully signed up.',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.href = '/login';
+                        }
+                    });
                 } else {
                     passwordError.innerText = response.message;
                 }
@@ -158,5 +169,6 @@
 </script>
 <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
