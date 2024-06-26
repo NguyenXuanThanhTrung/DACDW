@@ -6,6 +6,10 @@ import fit.hcmuaf.news.entity.Users;
 import fit.hcmuaf.news.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -32,7 +36,8 @@ public class CustomController {
     private CommentService commentService;
     @Autowired
     private UsersService userService;
-
+    @Autowired
+    private PasswordEncoder passwordEncoder;
     @RequestMapping(value = {"api/{id}", "api"})
     public String testindex(@PathVariable(required = false) Long id , Model model) {
         return "";
@@ -45,21 +50,28 @@ public class CustomController {
 
     @PostMapping("/checklogin")
     @ResponseBody
-    public Map<String, Object> checklogin(@RequestParam("username") String username,
-                                          @RequestParam("password") String password,
-                                          HttpSession session) {
+    public Map<String, Object> checklogin(@RequestBody Map<String, String> loginData, HttpSession session) {
         Map<String, Object> response = new HashMap<>();
+        String username = loginData.get("username");
+        String password = loginData.get("password");
+
         Users user = userService.authenticate(username, password);
         if (user != null) {
             session.setAttribute("user", user);
             response.put("success", true);
-            response.put("role", user.getRole()); // Giả sử rằng đối tượng Users có phương thức getRole()
+            response.put("role", user.getRole());
+            // Tạo và lưu trữ SecurityContext
+            UsernamePasswordAuthenticationToken authToken =
+                    new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
+            SecurityContextHolder.getContext().setAuthentication(authToken);
+            session.setAttribute("SPRING_SECURITY_CONTEXT", SecurityContextHolder.getContext());
         } else {
             response.put("success", false);
             response.put("message", "Invalid username or password.");
         }
         return response;
     }
+
 
     @RequestMapping("/signUp")
     public String showSignUpPage() {
@@ -81,7 +93,8 @@ public class CustomController {
         Users newUser = new Users();
         newUser.setName(name);
         newUser.setUsername(username);
-        newUser.setPassword(password);
+        String encodedPassword = passwordEncoder.encode(password);
+        newUser.setPassword(encodedPassword);  // Mã hóa mật khẩu chỉ một lần
         newUser.setAddress(address);
         newUser.setEmail(email);
         newUser.setPhonenumber(phoneNumber);
@@ -104,6 +117,7 @@ public class CustomController {
 
 
     @RequestMapping("/user")
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     public String user(HttpSession session) {
         Users user = (Users) session.getAttribute("user");
         if (user != null) {

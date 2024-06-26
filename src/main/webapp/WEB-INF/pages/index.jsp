@@ -172,7 +172,8 @@
                                             <c:forEach var="category" items="${categories}">
                                                 <c:choose>
                                                     <c:when test="${category.idCategory == 1}">
-                                                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
+                                                        <a class="nav-item nav-link active" id="nav-home-tab"
+                                                           data-toggle="tab"
                                                            href="#nav-home" role="tab" aria-controls="nav-home"
                                                            aria-selected="true">${category.categoryName}</a>
                                                     </c:when>
@@ -182,18 +183,6 @@
                                                            aria-selected="false">${category.categoryName}</a>
                                                     </c:otherwise>
                                                 </c:choose>
-                                                <!--  <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
-                                                href="#nav-profile" role="tab" aria-controls="nav-profile"
-                                                aria-selected="false">Travel</a>
-                                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
-                                                href="#nav-contact" role="tab" aria-controls="nav-contact"
-                                                aria-selected="false">Fashion</a>
-                                                <a class="nav-item nav-link" id="nav-last-tab" data-toggle="tab"
-                                                href="#nav-last" role="tab" aria-controls="nav-contact"
-                                                aria-selected="false">Sports</a>
-                                                <a class="nav-item nav-link" id="nav-Sports" data-toggle="tab"
-                                                href="#nav-nav-Sport" role="tab" aria-controls="nav-contact"
-                                                aria-selected="false">Technology</a>  -->
                                             </c:forEach>
                                         </div>
                                     </nav>
@@ -221,9 +210,10 @@
                                                              alt="">
                                                     </div>
                                                     <div class="whates-caption">
-                                                        <h4><a href="<%= request.getContextPath() %>/news/${lifestyle.idNews}">Secretart
-                                                            for Economic Air plane that looks like</a></h4>
-                                                        <span>by Alice cloe   -   ${lifestyle.createDay}</span>
+                                                        <h4>
+                                                            <a href="<%= request.getContextPath() %>/news/${lifestyle.idNews}">Secretart
+                                                                for Economic Air plane that looks like</a></h4>
+                                                        <span>by Alice cloe   - ${lifestyle.createDay}</span>
                                                         <p>${lifestyle.title}</p>
                                                     </div>
                                                 </div>
@@ -256,8 +246,6 @@
                                                     </c:forEach>
                                                 </div>
                                             </div>
-
-
                                         </div>
 
                                     </div>
@@ -353,8 +341,6 @@
                                             </div>
                                         </div>
                                     </div>
-
-
                                     <!-- Card three -->
                                     <div class="tab-pane fade" id="nav-contact" role="tabpanel"
                                          aria-labelledby="nav-contact-tab">
@@ -688,7 +674,9 @@
                                          alt="">
                                 </div>
                                 <div class="most-recent-capt">
-                                    <h4><a href="<%= request.getContextPath() %>/news/${mostrecent.idNews}">${mostrecent.title}</a></h4>
+                                    <h4>
+                                        <a href="<%= request.getContextPath() %>/news/${mostrecent.idNews}">${mostrecent.title}</a>
+                                    </h4>
                                     <p>Jhon | 2 hours ago</p>
                                 </div>
                             </div>
@@ -735,7 +723,9 @@
                                                          alt="">
                                                 </div>
                                                 <div class="weekly2-caption">
-                                                    <h4><a href="<%= request.getContextPath() %>/news/${mostpopular.idNews}">Scarlett’s disappointment at latest accolade</a></h4>
+                                                    <h4>
+                                                        <a href="<%= request.getContextPath() %>/news/${mostpopular.idNews}">Scarlett’s
+                                                            disappointment at latest accolade</a></h4>
                                                     <p>Jhon | 2 hours ago</p>
                                                 </div>
                                             </div>
@@ -748,7 +738,9 @@
                                                          alt="">
                                                 </div>
                                                 <div class="weekly2-caption">
-                                                    <h4><a href="<%= request.getContextPath() %>/news/${mostpopular.idNews}">Scarlett’s disappointment at latest accolade</a></h4>
+                                                    <h4>
+                                                        <a href="<%= request.getContextPath() %>/news/${mostpopular.idNews}">Scarlett’s
+                                                            disappointment at latest accolade</a></h4>
                                                     <p>Jhon | 2 hours ago</p>
                                                 </div>
                                             </div>
@@ -793,7 +785,9 @@
                                         <img src="<%= request.getContextPath() %>${trendingnews.image}" alt="">
                                     </div>
                                     <div class="what-cap">
-                                        <h4><a href="<%= request.getContextPath() %>/news/${trendingnews.idNews}">What to Expect From the 2020 Oscar Nominations day la id ${trendingnews.idNews} </a></h4>
+                                        <h4><a href="<%= request.getContextPath() %>/news/${trendingnews.idNews}">What
+                                            to Expect From the 2020 Oscar Nominations day la
+                                            id ${trendingnews.idNews} </a></h4>
                                         <p>Jun 19, 2020</p>
                                         <a class="popup-video btn-icon"
                                            href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span
@@ -809,7 +803,9 @@
                                         <img src="<%= request.getContextPath() %>${trendingnews.image}" alt="">
                                     </div>
                                     <div class="what-cap">
-                                        <h4><a href="<%= request.getContextPath() %>/news/${trendingnews.idNews}">What to Expect From the 2020 Oscar Nominations day la id ${trendingnews.idNews} </a></h4>
+                                        <h4><a href="<%= request.getContextPath() %>/news/${trendingnews.idNews}">What
+                                            to Expect From the 2020 Oscar Nominations day la
+                                            id ${trendingnews.idNews} </a></h4>
                                         <p>Jun 19, 2020</p>
                                         <a class="popup-video btn-icon"
                                            href="https://www.youtube.com/watch?v=1aP-TXUpNoU"><span
@@ -978,7 +974,9 @@
                                                          alt="">
                                                 </div>
                                                 <div class="weekly3-caption">
-                                                    <h4><a href="<%= request.getContextPath() %>/news/${crossbar.idNews}">${crossbar.title}</a></h4>
+                                                    <h4>
+                                                        <a href="<%= request.getContextPath() %>/news/${crossbar.idNews}">${crossbar.title}</a>
+                                                    </h4>
                                                     <p>19 Jan 2020</p>
                                                 </div>
                                             </div>
@@ -1033,13 +1031,34 @@
         <div class="search-close-btn">+</div>
         <form class="search-model-form">
             <input type="text" id="search-input" placeholder="Searching key.....">
+            <div id="search-results"></div>
         </form>
     </div>
 </div>
+
 <!-- Search model end -->
 
 <!-- JS here -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function searchNews() {
+        var query = $('#search-input').val();
+        if (query.length > 2) {
+            $.ajax({
+                url: '<%= request.getContextPath() %>/search',
+                method: 'GET',
+                data: {query: query},
+                success: function (response) {
+                    $('#search-results').html(response);
+                }
+            });
+        } else {
+            $('#search-results').html('');
+        }
+    }
+</script>
 <script src="../../assets/js/vendor/modernizr-3.5.0.min.js"></script>
 <!-- Jquery, Popper, Bootstrap -->
 <script src="../../assets/js/vendor/jquery-1.12.4.min.js"></script>

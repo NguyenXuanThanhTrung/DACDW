@@ -1,8 +1,12 @@
 package fit.hcmuaf.news.entity;
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @Entity
@@ -27,7 +31,8 @@ public class Users {
     private List<Comment> comments = new ArrayList<>();
 
     // Constructors
-    public Users() {}
+    public Users() {
+    }
 
     public Users(String name, String address, String email, String phonenumber, String username, String password, String sex, LocalDateTime updatedate, LocalDateTime dateofbirth, String role) {
         this.name = name;
@@ -137,5 +142,11 @@ public class Users {
 
     public void setComments(List<Comment> comments) {
         this.comments = comments;
+    }
+
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        List<GrantedAuthority> authorities = new ArrayList<>();
+        authorities.add(new SimpleGrantedAuthority("ROLE_" + this.role));
+        return authorities;
     }
 }

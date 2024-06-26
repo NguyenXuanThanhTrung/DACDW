@@ -1,19 +1,22 @@
 package fit.hcmuaf.news.controller;
 
-import fit.hcmuaf.news.entity.Users;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import javax.servlet.http.HttpSession;
+
 @Controller
 public class AdminController {
-    @RequestMapping("/admin")
+    private static final Logger logger = LoggerFactory.getLogger(AdminController.class);
+    @GetMapping("/admin")
+    @PreAuthorize("hasRole('ADMIN')")
     public String admin(HttpSession session) {
-        Users user = (Users) session.getAttribute("user");
-        if (user != null && "ADMIN".equals(user.getRole())) {
-            return "admin/admin"; // Đảm bảo rằng "admin" là tên của trang JSP cho quản trị viên
-        } else {
-            return "redirect:/login";
-        }
+        logger.debug("User session: " + session.getAttribute("user"));
+        logger.debug("Security context: " + SecurityContextHolder.getContext().getAuthentication());
+        return "admin/admin"; // Tên của view admin
     }
 }

@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="../../assets/css/style2.css">
+    <link rel="stylesheet" href="../../assets/css/style2.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <style>
@@ -36,15 +36,15 @@
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your email for registration</span>
-                <input type="text" name="name" placeholder="Name" required />
-                <input type="text" name="address" placeholder="Address" required />
-                <input type="email" name="email" placeholder="Email" required />
-                <input type="text" name="phoneNumber" placeholder="Phone Number" required />
-                <input type="text" name="username" placeholder="Username" required />
-                <input type="password" name="password" placeholder="Password" required />
-                <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
-                <input type="date" name="dateOfBirth" placeholder="Date of Birth" required />
-                <select name="sex" required>
+                <input type="text" name="name" placeholder="Name" required autocomplete="name"/>
+                <input type="text" name="address" placeholder="Address" required autocomplete="address-line1"/>
+                <input type="email" name="email" placeholder="Email" required autocomplete="email"/>
+                <input type="text" name="phoneNumber" placeholder="Phone Number" required autocomplete="tel"/>
+                <input type="text" name="username" placeholder="Username" required autocomplete="username"/>
+                <input type="password" name="password" placeholder="Password" required autocomplete="new-password"/>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required autocomplete="new-password"/>
+                <input type="date" name="dateOfBirth" placeholder="Date of Birth" required autocomplete="bday"/>
+                <select name="sex" required autocomplete="sex">
                     <option value="" disabled selected>Sex</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
@@ -106,6 +106,7 @@
 
         // Check if all fields are filled
         if (!name || !address || !email || !phoneNumber || !username || !password || !confirmPassword || !sex || !dateOfBirth) {
+            passwordError.style.display = 'block';
             passwordError.innerText = 'Please fill in all fields.';
             return;
         }
@@ -113,23 +114,26 @@
         // Check email format
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
+            passwordError.style.display = 'block';
             passwordError.innerText = 'Email address is not valid.';
             return;
         }
 
         // Check if password is at least 8 characters
         if (password.length < 8) {
+            passwordError.style.display = 'block';
             passwordError.innerText = 'Password must be at least 8 characters.';
             return;
         }
 
         // Check if password and confirm password match
         if (password !== confirmPassword) {
+            passwordError.style.display = 'block';
             passwordError.innerText = 'Password and confirm password do not match.';
             return;
         }
 
-        passwordError.innerText = '';
+        passwordError.style.display = 'none';
 
         $.ajax({
             url: '/signUp',
@@ -157,16 +161,19 @@
                         }
                     });
                 } else {
+                    passwordError.style.display = 'block';
                     passwordError.innerText = response.message;
                 }
             },
             error: function(xhr, status, error) {
                 console.error('Sign up failed:', error);
+                passwordError.style.display = 'block';
                 passwordError.innerText = 'Sign up failed. Please try again.';
             }
         });
     });
 </script>
+
 <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

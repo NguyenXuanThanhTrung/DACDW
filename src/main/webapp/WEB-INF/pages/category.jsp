@@ -126,19 +126,6 @@
                                 </div>
                             </div>
                         </div>
-                        Về phần controller, chúng ta không cần sửa gì về controller vì không có thông tin cụ thể được
-                        truyền vào từ controller.
-
-
-                        User
-                        hãy viết cho đầy đủ đi đừng có  <!-- Bổ sung thêm các phần còn lại tương tự -->
-                        ChatGPT
-                        Dưới đây là mã JSP sau khi được chỉnh sửa đầy đủ và phần controller:
-
-                        Mã JSP:
-
-                        jsp
-                        Copy code
                         <!-- Tab content -->
                         <div class="row">
                             <div class="col-12">
